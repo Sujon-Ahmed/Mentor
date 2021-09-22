@@ -77,6 +77,16 @@ class Database{
             return false;
         }
     }
+    // change password
+    public function change_password($id,$new_pass){
+        $this->sql = "UPDATE `admin` SET `admin_password`='$new_pass' WHERE `admin_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 
 

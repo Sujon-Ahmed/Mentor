@@ -1,9 +1,8 @@
 <?php
 session_start();
-if(isset($_SESSION['id'])){
-    header("location:index.php");
-}
 include "flash_data.php";
+include "database.php";
+$obj = new Database();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,20 +74,20 @@ include "flash_data.php";
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Login Here!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Change Password!</h1>
                                     </div>
-                                    <form  action="auth.php" method="POST" id="login" class="user">
+                                    <form  action="update_password.php" method="POST" id="change_password" class="user" data-parsley-validate>
                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." required>
+                                            <input type="password" name="cur_password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Current Password" data-parsley-trigger="keyup" data-parsley-error-message="Enter Your Current Password" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" required>
+                                            <input type="password" name="new_password" class="form-control form-control-user" id="inputPassword" placeholder="New Password" data-parsley-trigger="keyup" data-parsley-minlength="6" required>
                                         </div>
-                                        <input type="submit" name="submit" class="btn btn-primary btn-user btn-block" value="Login">
-                                        <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="register.php">Create an Account!</a>
-                                    </div>
+                                        <div class="form-group">
+                                            <input type="password" name="con_password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Confirm Password" data-parsley-trigger="keyup" data-parsley-equalto="#inputPassword" data-parsley-minlength="6" required>
+                                        </div>
+                                        <input type="submit" name="submit" class="btn btn-primary btn-user btn-block" value="Save Changes">
+                                    </form>    
                                 </div>
                             </div>
                         </div>
@@ -104,40 +103,5 @@ include "flash_data.php";
     <!-- form validation js file -->
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/additional-methods.min.js"></script>
-    <!-- form validation -->
-    <script>
-        $(document).ready(function () {
-                $('#login').validate({
-                    rules: {
-                        email: {
-                            required: true,
-                        },
-                        password: {
-                            required: true,
-                        },
-                    },
-                      messages: {
-                        email: {
-                        required: "",
-                      },
-                      password: {
-                        required: "",
-                      },
-                    },
-                    errorElement: 'span',
-                    errorPlacement: function (error, element) {
-                    error.addClass('invalid-feedback');
-                    element.closest('.form-group').append(error);
-                    },
-                    highlight: function (element, errorClass, validClass) {
-                    $(element).addClass('is-invalid');
-                    },
-                    unhighlight: function (element, errorClass, validClass) {
-                    $(element).removeClass('is-invalid');
-                    }
-                });
-            });
-        </script>
-    
 </body>
 </html>
