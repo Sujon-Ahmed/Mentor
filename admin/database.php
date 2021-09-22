@@ -37,6 +37,46 @@ class Database{
             return false;
         }
     }
+    // profile retrive
+    public function profile_retrive($id){
+        $this->sql = "SELECT * FROM `admin` WHERE admin_id = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+    // profile update with photo
+    public function update_profile($id,$name,$email,$phone,$about,$fileNewName){
+        $this->sql = "UPDATE `admin` SET `admin_name`='$name',`admin_email`='$email',`admin_about`='$about',`admin_phone`='$phone',`admin_photo`='$fileNewName' WHERE `admin_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    // profile update without photo
+    public function update_profile_out_photo($id,$name,$email,$phone,$about,$oldphoto){
+        $this->sql = "UPDATE `admin` SET `admin_name`='$name',`admin_email`='$email',`admin_about`='$about',`admin_phone`='$phone',`admin_photo`='$oldphoto' WHERE `admin_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    // profile photo retrive
+    public function profile_retrive_photo(){
+        $this->sql = "SELECT * FROM `admin`";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
 }
 
 
