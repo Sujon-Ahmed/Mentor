@@ -23,7 +23,7 @@ if(isset($_POST['submit']) && $_SERVER["REQUEST_METHOD"] == "POST"){
             Flash_data::success("Account Create Success! Please Login!");
             header("location:login.php");
         }else{
-            Flash_data::error("Provide a Valid or Unique Email!");
+            Flash_data::error("Provide a Valid or Unique Email");
             header("location:register.php");
         }
     }else{

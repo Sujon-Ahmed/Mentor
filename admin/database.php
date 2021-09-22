@@ -27,6 +27,16 @@ class Database{
             return false;
         }
     }
+    // check email
+    public function check_email($email){
+        $this->sql = "SELECT * FROM `admin` WHERE admin_email = '$email'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
 }
 
 

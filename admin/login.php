@@ -10,7 +10,7 @@ include "flash_data.php";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Admin Panel</title>
+    <title>Admin Panel</title> 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -54,10 +54,13 @@ include "flash_data.php";
         <?php
             if(isset($_SESSION['msg']['error'])){
                 ?>
-                    toastr.error("<?php echo Flash_data::show_error(); ?>");
+                    <script>
+                        toastr.error("<?php echo Flash_data::show_error(); ?>");
+                    </script> 
                 <?php
             }
         ?>
+        
         <!-- Outer Row -->
         <div class="row justify-content-center">
             <div class="col-xl-10 col-lg-12 col-md-9">
@@ -71,16 +74,14 @@ include "flash_data.php";
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Login Here!</h1>
                                     </div>
-                                    <form class="user">
+                                    <form  action="auth.php" method="POST" id="login" class="user">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                                            <input type="email" name="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" required>
                                         </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                        </a>
+                                        <input type="submit" name="submit" class="btn btn-primary btn-user btn-block" value="Login">
                                         <hr>
                                     <div class="text-center">
                                         <a class="small" href="register.php">Create an Account!</a>
@@ -100,6 +101,40 @@ include "flash_data.php";
     <!-- form validation js file -->
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/additional-methods.min.js"></script>
+    <!-- form validation -->
+    <script>
+        $(document).ready(function () {
+                $('#login').validate({
+                    rules: {
+                        email: {
+                            required: true,
+                        },
+                        password: {
+                            required: true,
+                        },
+                    },
+                      messages: {
+                        email: {
+                        required: "",
+                      },
+                      password: {
+                        required: "",
+                      },
+                    },
+                    errorElement: 'span',
+                    errorPlacement: function (error, element) {
+                    error.addClass('invalid-feedback');
+                    element.closest('.form-group').append(error);
+                    },
+                    highlight: function (element, errorClass, validClass) {
+                    $(element).addClass('is-invalid');
+                    },
+                    unhighlight: function (element, errorClass, validClass) {
+                    $(element).removeClass('is-invalid');
+                    }
+                });
+            });
+        </script>
     
 </body>
 </html>
