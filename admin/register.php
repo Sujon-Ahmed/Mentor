@@ -1,3 +1,7 @@
+<?php
+session_start();
+include "flash_data.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +19,8 @@
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="css/sb-admin-2.css">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- stylesheet toastr file -->
+    <link rel="stylesheet" href="css/toastr.css">
     <!-- style for parsley message -->
     <style>
         .parsley-errors-list li{
@@ -27,6 +33,16 @@
 </head>
 <body class="bg-gradient-primary">
     <div class="container">
+        <!-- toastr error message -->
+        <?php
+            if(isset($_SESSION['msg']['error'])){
+                ?>
+                    <script>
+                        toastr.error("<?php echo Flash_data::show_error(); ?>");
+                    </script>
+                <?php
+            }
+        ?>
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
@@ -66,6 +82,10 @@
             </div>
         </div>
     </div>
+    <!-- jquery cdn link -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -75,6 +95,8 @@
     <script src="js/sb-admin-2.min.js"></script>
     <!-- parsley js file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.js" integrity="sha512-Fq/wHuMI7AraoOK+juE5oYILKvSPe6GC5ZWZnvpOO/ZPdtyA29n+a5kVLP4XaLyDy9D1IBPYzdFycO33Ijd0Pg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- toastr js file -->
+    <script src="js/toastr.min.js"></script>
     <!-- script for parsley -->
     <script>
         $('#register').parsley();
