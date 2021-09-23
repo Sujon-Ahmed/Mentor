@@ -7,7 +7,7 @@ $obj = new Database();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -62,7 +62,6 @@ $obj = new Database();
                 <?php
             }
         ?>
-        
         <!-- Outer Row -->
         <div class="row justify-content-center">
             <div class="col-xl-10 col-lg-12 col-md-9">
@@ -86,7 +85,8 @@ $obj = new Database();
                                         <div class="form-group">
                                             <input type="password" name="con_password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Confirm Password" data-parsley-trigger="keyup" data-parsley-equalto="#inputPassword" data-parsley-minlength="6" required>
                                         </div>
-                                        <input type="submit" name="submit" class="btn btn-primary btn-user btn-block" value="Save Changes">
+                                        <input type="submit" name="submit" class="btn btn-primary btn-user btn-block mb-3" value="Save Changes">
+                                        <a href="index.php" title="Home Page" class="mt-5 text-center btn-block btn-user m-auto">Back to Home Page</a>
                                     </form>    
                                 </div>
                             </div>
