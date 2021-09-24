@@ -5,6 +5,26 @@ include "header.php";
 ?>
 <!-- Begin Page Content -->
 <div class="container-fluid mb-5">
+    <!-- toastr success message -->
+    <?php
+        if(isset($_SESSION['msg']['success'])){
+            ?>
+                <script>
+                    toastr.success("<?php echo Flash_data::show_error(); ?>");
+                </script>
+            <?php
+        }
+    ?>
+    <!-- toastr error message -->
+    <?php
+        if(isset($_SESSION['msg']['error'])){
+            ?>
+                <script>
+                    toastr.error("<?php echo Flash_data::show_error(); ?>");
+                </script>
+            <?php
+        }
+    ?>
     <!-- Page Heading -->
     <div class=" mb-4">
         <h1 class="h3 mb-0 text-gray-800">Create Banner</h1>

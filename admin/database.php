@@ -87,6 +87,16 @@ class Database{
             return false;
         }
     }
+    // insert banner data
+    public function create_banner($title,$desc,$fileNewName){
+        $this->sql = "INSERT INTO `banner`(`banner_title`, `banner_img`, `banner_desc`) VALUES ('$title','$fileNewName','$desc')";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 
 
