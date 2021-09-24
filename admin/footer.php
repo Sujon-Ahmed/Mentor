@@ -48,6 +48,8 @@
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- summernote script cdn link -->
+    <script src="summernote/summernote-bs4.min.js"></script>
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
@@ -57,8 +59,9 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
-    <!-- script for profile image preview -->
+    <!-- script for image preview -->
     <script>
+        // image preview script for profile
         function profilePreview(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
@@ -71,6 +74,28 @@
             }
             $("#img-file").change(function () {
                 profilePreview(this);
+        });
+        // image preview script for banner
+        function bannerPreview(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#banner + img').remove();
+                    $('#banner-img-prev').html('<img class="img-fluid img-thumbnail" src="'+e.target.result+'" width="400px" height="auto" />');
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#banner-img").change(function() {
+            bannerPreview(this);
+        });
+    </script>
+    <!-- script for summernote -->
+    <script>
+        $('#desc').summernote({
+            placeholder: 'Write Something here...',
+            tabsize: 2,
+            height: 200
         });
     </script>
 </body>
