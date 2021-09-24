@@ -9,7 +9,7 @@ if(!isset($_POST['submit'])){
 }else{
     $title = $_POST['title'];
     $desc = $_POST['description'];
-
+    // check image empty
     if(!empty($_FILES['file']['name'])){
         $fileName = $_FILES['file']['name'];
         $fileTmp = $_FILES['file']['tmp_name'];
@@ -44,5 +44,4 @@ if(!isset($_POST['submit'])){
         header('location:create_banner.php');
     }
 }
-
 ?>

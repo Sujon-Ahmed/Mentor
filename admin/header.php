@@ -32,6 +32,8 @@ if($get_admin_photo->num_rows > 0){
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <!-- toastr css file -->
     <link rel="stylesheet" href="css/toastr.css">
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <!-- summernote -->
     <link rel="stylesheet" href="summernote/summernote-bs4.min.css">
     <script src="js/jquery.js"></script>
