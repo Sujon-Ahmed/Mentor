@@ -43,7 +43,7 @@ $result = $obj->banner_details();
                                                 </a>
                                             </td>
                                             <td><?php echo date('M-d-Y h:i A',strtotime($row->banner_created_at)); ?></td>
-                                            <td class="text-center"><a title="Edit" href="#" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a></td>
+                                            <td class="text-center"><a title="Edit" href="edit_banner.php?id=<?php echo $row->banner_id; ?>" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a></td>
                                             <td class="text-center"><a title="Details" href="single_banner_details.php?id=<?php echo $row->banner_id; ?>" class="btn btn-success btn-sm"><i class="fas fa-eye"></i></a></td>
                                             <td class="text-center"><a title="Delete" href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a></td>
                                         </tr>

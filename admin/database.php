@@ -118,6 +118,26 @@ class Database{
             return false;
         }
     }
+    // update banner with photo
+    public function banner_update_withPhoto($id,$title,$desc,$fileNewName){
+        $this->sql = "UPDATE `banner` SET `banner_title`='$title',`banner_img`='$fileNewName',`banner_desc`='$desc' WHERE `banner_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+     // update banner without photo
+     public function banner_update_withOutPhoto($id,$title,$desc,$oldphoto){
+        $this->sql = "UPDATE `banner` SET `banner_title`='$title',`banner_img`='$oldphoto',`banner_desc`='$desc' WHERE `banner_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 
 
