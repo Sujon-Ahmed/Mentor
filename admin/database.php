@@ -98,9 +98,19 @@ class Database{
             return false;
         }
     }
-    // insert banner data
+    // fetch all banner dataTables
     public function banner_details(){
         $this->sql = "SELECT * FROM `banner`";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+     // get single banner details
+     public function get_single_banner($id){
+        $this->sql = "SELECT * FROM `banner` WHERE banner_id = '$id'";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return $this->result;
