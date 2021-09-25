@@ -128,9 +128,19 @@ class Database{
             return false;
         }
     }
-     // update banner without photo
-     public function banner_update_withOutPhoto($id,$title,$desc,$oldphoto){
+    // update banner without photo
+    public function banner_update_withOutPhoto($id,$title,$desc,$oldphoto){
         $this->sql = "UPDATE `banner` SET `banner_title`='$title',`banner_img`='$oldphoto',`banner_desc`='$desc' WHERE `banner_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    // Banner delete with id
+    public function banner_delete($id){
+        $this->sql = "DELETE FROM `banner` WHERE `banner_id` = '$id'";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return true;
