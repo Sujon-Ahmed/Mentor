@@ -6,6 +6,26 @@ $result = $obj->banner_details();
 ?>
  <!-- Begin Page Content -->
  <div class="container-fluid">
+    <!-- toastr success message -->
+    <?php
+        if(isset($_SESSION['msg']['success'])){
+            ?>
+                <script>
+                    toastr.success("<?php echo Flash_data::show_error(); ?>");
+                </script>
+            <?php
+        }
+    ?>
+    <!-- toastr error message -->
+    <?php
+        if(isset($_SESSION['msg']['error'])){
+            ?>
+                <script>
+                    toastr.error("<?php echo Flash_data::show_error(); ?>");
+                </script>
+            <?php
+        }
+    ?>
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">View Banner</h1>
     <p class="mb-4">Dashboard / Banner / View</p>
