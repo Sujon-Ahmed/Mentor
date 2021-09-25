@@ -94,6 +94,20 @@
         $("#banner-img").change(function() {
             bannerPreview(this);
         });
+        // image preview script for about
+        function aboutPreview(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#about + img').remove();
+                    $('#about-img-prev').html('<img class="img-fluid img-thumbnail" src="'+e.target.result+'" width="400px" height="auto" />');
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#about-img").change(function() {
+            aboutPreview(this);
+        });
     </script>
     <!-- script for summernote -->
     <script>

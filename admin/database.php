@@ -148,6 +148,17 @@ class Database{
             return false;
         }
     }
+    // ================= about section ======================
+    // insert about
+    public function insert_about($title, $desc, $fileNewName){
+        $this->sql = "INSERT INTO `about`(`about_title`, `about_desc`, `about_image`) VALUES ('$title','$desc','$fileNewName')";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 
 

@@ -63,20 +63,35 @@ if($get_admin_photo->num_rows > 0){
             <hr class="sidebar-divider">
             <!-- Heading -->
             <div class="sidebar-heading">
-                Home Section
+                Interface
             </div>
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Banner section -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBanner"
+                    aria-expanded="true" aria-controls="collapseBanner">
                     <i class="fas fa-fw fa-vr-cardboard"></i>
                     <span>Banner</span>
                 </a>
-                <div id="collapseTwo" class="collapse <?php if($page == "banner"){echo "show";} ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="collapseBanner" class="collapse <?php if($page == "banner"){echo "show";} ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Manage Banner</h6>
                         <a class="collapse-item <?php if($sub_page == "create_banner"){echo "active";} ?>" href="create_banner.php">Create</a>
                         <a class="collapse-item <?php if($sub_page == "view_banner"){echo "active";} ?>" href="view_banner.php">View</a>
+                    </div>
+                </div>
+            </li>
+             <!-- Nav Item - About Section -->
+             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAbout"
+                    aria-expanded="true" aria-controls="collapseAbout">
+                    <i class="fas fa-fw fa-address-card"></i>
+                    <span>About</span>
+                </a>
+                <div id="collapseAbout" class="collapse <?php if($page == "about"){echo "show";} ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage About</h6>
+                        <a class="collapse-item <?php if($sub_page == "create_about"){echo "active";} ?>" href="create_about.php">Create</a>
+                        <a class="collapse-item <?php if($sub_page == "view_about"){echo "active";} ?>" href="view_about.php">View</a>
                     </div>
                 </div>
             </li>
