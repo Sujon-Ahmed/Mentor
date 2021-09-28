@@ -159,6 +159,17 @@ class Database{
             return false;
         }
     }
+     // get all data form about
+     public function about_details(){
+        $this->sql = "SELECT * FROM `about`";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+    
 }
 
 
