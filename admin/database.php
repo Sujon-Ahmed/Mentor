@@ -148,6 +148,16 @@ class Database{
             return false;
         }
     }
+    // get banner with limit in home page
+    public function get_limit_banner(){
+        $this->sql = "SELECT * FROM `banner` LIMIT 1";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
     // ================= about section ======================
     // insert about
     public function insert_about($title, $desc, $fileNewName){
@@ -162,6 +172,16 @@ class Database{
      // get all data form about
      public function about_details(){
         $this->sql = "SELECT * FROM `about`";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+     // get all data form about section with limit
+     public function get_limit_about(){
+        $this->sql = "SELECT * FROM `about` LIMIT 1";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return $this->result;
