@@ -189,7 +189,7 @@ class Database{
             return false;
         }
     }
-    // get all data form about section with limit
+    // get all data form about details page
     public function get_about_details($id){
         $this->sql = "SELECT * FROM `about` WHERE about_id = '$id'";
         $this->result = $this->conn->query($this->sql);
@@ -199,7 +199,26 @@ class Database{
             return false;
         }
     }
-
+    // about update with photo
+    public function update_about_with_photo($id,$title,$desc,$fileNewName){
+        $this->sql = "UPDATE `about` SET `about_title`='$title',`about_desc`='$desc',`about_image`='$fileNewName' WHERE `about_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    // about update without photo
+    public function update_about_without_photo($id,$title,$desc,$oldphoto){
+        $this->sql = "UPDATE `about` SET `about_title`='$title',`about_desc`='$desc',`about_image`='$oldphoto' WHERE `about_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     
 }

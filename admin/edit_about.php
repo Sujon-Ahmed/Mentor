@@ -7,6 +7,7 @@ if(isset($_GET['id'])){
     $details_about = $obj->get_about_details($id);
     if($details_about->num_rows > 0){
         while($row = $details_about->fetch_object()){
+            $id = $row->about_id;
             $title = $row->about_title;
             $desc = $row->about_desc;
             $img = $row->about_image;
@@ -67,6 +68,7 @@ if(isset($_GET['id'])){
                         <label for="description">Description</label>
                         <textarea name="description" id="desc" class="form-control" cols="30" rows="10"><?php echo $desc; ?></textarea>
                         <input type="submit" name="submit" class="btn btn-primary mt-3" value="Save Changes">
+                        <input type="hidden" name="id" value="<?php echo $id; ?>">
                     </div>
                 </div>
             </div>
