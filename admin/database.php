@@ -169,8 +169,8 @@ class Database{
             return false;
         }
     }
-     // get all data form about
-     public function about_details(){
+    // get all data form about
+    public function about_details(){
         $this->sql = "SELECT * FROM `about`";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
@@ -179,8 +179,8 @@ class Database{
             return false;
         }
     }
-     // get all data form about section with limit
-     public function get_limit_about(){
+    // get all data form about section with limit
+    public function get_limit_about(){
         $this->sql = "SELECT * FROM `about` LIMIT 1";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
@@ -189,6 +189,18 @@ class Database{
             return false;
         }
     }
+    // get all data form about section with limit
+    public function get_about_details($id){
+        $this->sql = "SELECT * FROM `about` WHERE about_id = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+
+
     
 }
 

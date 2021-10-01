@@ -65,7 +65,7 @@ $result = $obj->about_details();
                                             <a href="#" class="btn btn-success btn-sm"><i class="fas fa-edit"></i></a>
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></a>
+                                            <a title="View" href="about_details.php?id=<?php echo $row->about_id; ?>" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></a>
                                         </td>
                                         <td>
                                             <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
