@@ -230,6 +230,26 @@ class Database{
             return false;
         }
     }
+    // get all data form why_about table
+    public function why_about_details(){
+        $this->sql = "SELECT * FROM `why_about`";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+    // get  why_about data with id
+    public function get_why_about($id){
+        $this->sql = "SELECT * FROM `why_about` WHERE why_about_id = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
 
     
 }
