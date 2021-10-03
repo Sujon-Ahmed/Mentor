@@ -219,6 +219,17 @@ class Database{
             return false;
         }
     }
+    // ================ why about-us section ==============
+    // insert about
+    public function insert_why_about($title,$desc){
+        $this->sql = "INSERT INTO `why_about`( `why_about_title`, `why_about_desc`) VALUES ('$title','$desc')";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     
 }
