@@ -4,6 +4,7 @@ include "admin/database.php";
 $obj = new Database();
 $banner = $obj->get_limit_banner();
 $about = $obj->get_limit_about();
+$why_about = $obj->get_limit_why_about();
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -80,16 +80,21 @@ include "font-header.php";
 
         <div class="row">
           <div class="col-lg-4 d-flex align-items-stretch">
-            <div class="content">
-              <h3>Why Choose Mentor?</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
-              </p>
-              <div class="text-center">
-                <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-              </div>
-            </div>
+            <?php
+              if($why_about->num_rows > 0){
+                while($row = $why_about->fetch_object()){
+                  ?>
+                  <div class="content">
+                    <h3><?php echo $row->why_about_title; ?></h3>
+                    <p class="text-muted"><?php echo $row->why_about_desc; ?></p>
+                    <div class="text-center">
+                      <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                    </div>
+                  </div>
+                  <?php
+                }
+              }
+            ?>
           </div>
           <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-boxes d-flex flex-column justify-content-center">

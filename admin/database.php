@@ -240,9 +240,19 @@ class Database{
             return false;
         }
     }
-    // get  why_about data with id
+    // get why_about data with id
     public function get_why_about($id){
         $this->sql = "SELECT * FROM `why_about` WHERE why_about_id = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+    // get why_about data in home page with limit
+    public function get_limit_why_about(){
+        $this->sql = "SELECT * FROM `why_about` LIMIT 1";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return $this->result;
@@ -253,6 +263,4 @@ class Database{
 
     
 }
-
-
 ?>
