@@ -260,7 +260,16 @@ class Database{
             return false;
         }
     }
-
+    // get why_about data in home page with limit
+    public function why_about_update($id,$title,$desc){
+        $this->sql = "UPDATE `why_about` SET `why_about_title`='$title',`why_about_desc`='$desc' WHERE `why_about_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
     
 }
 ?>
