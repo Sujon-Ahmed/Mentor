@@ -95,7 +95,7 @@ if($get_admin_photo->num_rows > 0){
                     </div>
                 </div>
             </li>
-             <!-- Nav Item - Wht About-us -->
+             <!-- Nav Item - Why About-us -->
              <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseWhyAbout"
                     aria-expanded="true" aria-controls="collapseWhyAbout">
@@ -107,6 +107,21 @@ if($get_admin_photo->num_rows > 0){
                         <h6 class="collapse-header">Manage Why About</h6>
                         <a class="collapse-item <?php if($sub_page == "create_why_about"){echo "active";} ?>" href="create_why_about.php">Create</a>
                         <a class="collapse-item <?php if($sub_page == "view_why_about"){echo "active";} ?>" href="view_why_about.php">View</a>
+                    </div>
+                </div>
+            </li>
+            <!-- Nav Item - Features of Course -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFeaturesCourse"
+                    aria-expanded="true" aria-controls="collapseFeaturesCourse">
+                    <i class="fas fa-fw fa-award"></i>
+                    <span>Course_Features</span>
+                </a>
+                <div id="collapseFeaturesCourse" class="collapse <?php if($page == "features"){echo "show";} ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage Course Features</h6>
+                        <a class="collapse-item <?php if($sub_page == "create_course_features"){echo "active";} ?>" href="create_course_features.php">Create</a>
+                        <a class="collapse-item <?php if($sub_page == "view_course_features"){echo "active";} ?>" href="view_course_features.php">View</a>
                     </div>
                 </div>
             </li>

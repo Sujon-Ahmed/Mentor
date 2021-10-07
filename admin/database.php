@@ -270,6 +270,22 @@ class Database{
             return false;
         }
     }
+    // ======================= course features ====================
+    // insert course features data
+    public function insert_course_features($icon,$title,$desc){
+        $this->sql = "INSERT INTO `course_features` (`course_features_icon`, `course_features_title`, `course_features_desc`) VALUES ('$icon','$title','$desc')";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    // close connection
+    public function __destruct()
+    {
+        $this->conn->close();
+    }
     
 }
 ?>
