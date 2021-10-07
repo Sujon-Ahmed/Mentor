@@ -37,7 +37,7 @@ include "header.php";
                     <div class="card-header py-3">
                         <div class="d-flex justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">Create Why About</h6>
-                            <a href="view_why_about.php" class="btn btn-primary btn-sm">View</a>
+                            <a href="view_course_features.php" class="btn btn-primary btn-sm">View</a>
                         </div>
                     </div>
                     <div class="card-body">

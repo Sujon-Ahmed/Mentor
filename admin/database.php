@@ -281,6 +281,16 @@ class Database{
             return false;
         }
     }
+    // get course features data
+    public function get_course_features(){
+        $this->sql = "SELECT * FROM `course_features`";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
     // close connection
     public function __destruct()
     {
