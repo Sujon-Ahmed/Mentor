@@ -291,11 +291,22 @@ class Database{
             return false;
         }
     }
+    // get course features data with id
+    public function get_course_features_withID($id){
+        $this->sql = "SELECT * FROM `course_features` WHERE course_features_id = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+
+
     // close connection
     public function __destruct()
     {
         $this->conn->close();
     }
-    
 }
 ?>
