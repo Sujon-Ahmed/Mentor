@@ -341,6 +341,18 @@ class Database{
             return false;
         }
     }
+    // ================ course category section ==============
+    // insert course category
+    public function course_category_insert($icon,$name)
+    {
+        $this->sql = "INSERT INTO `course_category`(`course_category_icon`, `course_category_name`) VALUES ('$icon','$name')";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 
     // close connection

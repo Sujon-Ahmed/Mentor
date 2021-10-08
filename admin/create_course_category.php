@@ -1,6 +1,6 @@
 <?php
-$page = "features";
-$sub_page = "create_course_features";
+$page = "course_category";
+$sub_page = "create_course_category";
 include "header.php";
 ?>
 <!-- Begin Page Content -->
@@ -30,9 +30,9 @@ include "header.php";
         <h1 class="h3 mb-0 text-gray-800">Create Course Features</h1>
         <p class="mb-4">Dashboard / Features / Create</p>
     </div>
-    <form action="create_course_features_action.php" method="POST">
+    <form action="create_course_category_action.php" method="POST">
         <div class="row">
-            <div class="col-md-10 m-auto">
+            <div class="col-md-8 m-auto">
                 <div class="card shadow-sm mb-4">
                     <div class="card-header py-3">
                         <div class="d-flex justify-content-between">
@@ -41,12 +41,10 @@ include "header.php";
                         </div>
                     </div>
                     <div class="card-body">
-                        <label for="icon">Features Icon <small><a target="_blank" href="https://boxicons.com/"> Visit Site</a></small></label>
-                        <input type="text" name="icon" id="icon" class="form-control" placeholder="bx bx-icon_name">
-                        <label for="title" class="mt-2">Features Title</label>
-                        <input type="text" name="title" id="title" class="form-control" placeholder="Enter why about us title...">
-                        <label for="description">Description</label>
-                        <textarea name="description" id="desc" class="form-control" cols="30" rows="10"></textarea>
+                        <label for="icon">Category Icon <small><a target="_blank" href="https://boxicons.com/"> Visit Site</a></small></label>
+                        <input type="text" name="icon" id="icon" class="form-control" placeholder="bx bxs-icon_name">
+                        <label for="name" class="mt-2">Category Name</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Enter category name">
                         <input type="submit" name="submit" class="btn btn-primary mt-3" value="Save Changes">
                     </div>
                 </div>
