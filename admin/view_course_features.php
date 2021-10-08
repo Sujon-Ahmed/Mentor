@@ -61,7 +61,7 @@ $result = $obj->get_course_features();
                                             <td><?php echo $row->course_features_title; ?></td>
                                             <td>
                                                 <?php
-                                                    $details = $row->course_features_title;
+                                                    $details = $row->course_features_desc;
                                                     if(strlen($details) > 50){
                                                         echo substr($details, 0, 50).'...';
                                                     }else{
@@ -70,8 +70,11 @@ $result = $obj->get_course_features();
                                                  ?>
                                             </td>
                                             <td><?php echo date("M-d-Y h:i A",strtotime($row->course_features_created)); ?></td>
+                                            <!-- edit menu -->
                                             <td><a title="Edit" href="course_features_edit.php?id=<?php echo $row->course_features_id; ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a></td>
+                                            <!-- view menu -->
                                             <td><a title="View" href="course_features_details.php?id=<?php echo $row->course_features_id; ?>" class="btn btn-success btn-sm"><i class="fas fa-eye"></i></a></td>
+                                            <!-- delete menu -->
                                             <td><a title="Delete" href="course_features_delete.php?id=<?php echo $row->course_features_id; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a></td>
                                         </tr>
                                     <?php

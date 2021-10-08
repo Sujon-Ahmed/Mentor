@@ -105,7 +105,7 @@ include "font-header.php";
                       ?>
                         <div class="col-xl-4 d-flex align-items-stretch">
                           <div class="icon-box mt-4 mt-xl-0">
-                            <i class="<?php echo $row->course_features_icon; ?>"></i>
+                            <i class="<?php echo $row->course_features_icon; ?> bx-tada-hover"></i>
                             <h4><?php echo $row->course_features_title; ?></h4>
                             <p><?php echo $row->course_features_desc; ?></p>
                           </div>
