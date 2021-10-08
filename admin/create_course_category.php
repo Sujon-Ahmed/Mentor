@@ -37,12 +37,12 @@ include "header.php";
                     <div class="card-header py-3">
                         <div class="d-flex justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">Create Why About</h6>
-                            <a href="view_course_features.php" class="btn btn-primary btn-sm">View</a>
+                            <a href="view_course_category.php" class="btn btn-primary btn-sm">View</a>
                         </div>
                     </div>
                     <div class="card-body">
-                        <label for="icon">Category Icon <small><a target="_blank" href="https://boxicons.com/"> Visit Site</a></small></label>
-                        <input type="text" name="icon" id="icon" class="form-control" placeholder="bx bxs-icon_name">
+                        <label for="icon">Category Icon <small><a target="_blank" href="https://fontawesome.com/v5.15/icons?d=gallery&p=2"> Visit Site</a></small></label>
+                        <input type="text" name="icon" id="icon" class="form-control" placeholder="fa fa-icon_name">
                         <label for="name" class="mt-2">Category Name</label>
                         <input type="text" name="name" id="name" class="form-control" placeholder="Enter category name">
                         <input type="submit" name="submit" class="btn btn-primary mt-3" value="Save Changes">

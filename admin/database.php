@@ -353,6 +353,17 @@ class Database{
             return false;
         }
     }
+    // get course category
+    public function get_course_category()
+    {
+        $this->sql = "SELECT * FROM `course_category`";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
 
 
     // close connection
