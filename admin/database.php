@@ -270,6 +270,16 @@ class Database{
             return false;
         }
     }
+    // delete why_about section
+    public function why_about_section_delete($id){
+        $this->sql = "DELETE FROM `why_about` WHERE `why_about_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
     // ======================= course features ====================
     // insert course features data
     public function insert_course_features($icon,$title,$desc){
@@ -311,7 +321,7 @@ class Database{
             return false;
         }
     }
-    // course features upate with id
+    // course features update with id
     public function course_features_update($id,$icon,$title,$desc){
         $this->sql = "UPDATE `course_features` SET `course_features_icon`='$icon',`course_features_title`='$title',`course_features_desc`='$desc' WHERE `course_features_id` = '$id'";
         $this->result = $this->conn->query($this->sql);

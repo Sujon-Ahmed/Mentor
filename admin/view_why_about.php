@@ -71,7 +71,7 @@ $result = $obj->why_about_details();
                                             <td><?php echo date('M-d-Y h:i A',strtotime($row->why_about_created)); ?></td>
                                             <td><a title="Edit" class="btn btn-success btn-sm" href="why_about_edit.php?id=<?php echo $row->why_about_id; ?>"><i class="fas fa-edit"></i></a></td>
                                             <td><a title="View" class="btn btn-info btn-sm" href="why_about_details.php?id=<?php echo $row->why_about_id; ?>"><i class="fas fa-eye"></i></a></td>
-                                            <td><a title="Delete" class="btn btn-danger btn-sm" href="why_about_delete.php?id=<?php echo $row->why_about_id; ?>"><i class="fas fa-trash"></i></a></td>
+                                            <td><a onclick="javascript:return confirm('Are You Sure?')" title="Delete" class="btn btn-danger btn-sm" href="why_about_delete.php?id=<?php echo $row->why_about_id; ?>"><i class="fas fa-trash"></i></a></td>
                                         </tr>
                                     <?php
                                     $si++;
