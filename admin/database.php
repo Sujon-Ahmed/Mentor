@@ -301,6 +301,16 @@ class Database{
             return false;
         }
     }
+    // get course features data in index page with limit
+    public function features_limit(){
+        $this->sql = "SELECT * FROM `course_features` LIMIT 3";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
 
 
     // close connection

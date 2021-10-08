@@ -41,8 +41,8 @@ include "header.php";
                         </div>
                     </div>
                     <div class="card-body">
-                        <label for="icon">Features Icon</label>
-                        <input type="text" name="icon" id="icon" class="form-control" placeholder="fas fa-icon_name">
+                        <label for="icon">Features Icon <small><a target="_blank" href="https://boxicons.com/"> Visit Site</a></small></label>
+                        <input type="text" name="icon" id="icon" class="form-control" placeholder="bx bx-icon_name">
                         <label for="title" class="mt-2">Features Title</label>
                         <input type="text" name="title" id="title" class="form-control" placeholder="Enter why about us title...">
                         <label for="description">Description</label>

@@ -38,6 +38,11 @@ if($get_admin_photo->num_rows > 0){
     <link rel="stylesheet" href="summernote/summernote-bs4.min.css">
     <script src="js/jquery.js"></script>
     <script src="js/toastr.min.js"></script>
+    <!-- boxicon cdn link -->
+    <link rel="stylesheet" href="boxicons/css/animations.css">
+    <link rel="stylesheet" href="boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="boxicons/css/transformations.css">
 </head>
 <body id="page-top">
     <!-- Page Wrapper -->

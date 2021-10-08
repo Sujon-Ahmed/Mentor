@@ -5,6 +5,7 @@ $obj = new Database();
 $banner = $obj->get_limit_banner();
 $about = $obj->get_limit_about();
 $why_about = $obj->get_limit_why_about();
+$course_features = $obj->features_limit();
 ?>
 <!DOCTYPE html>
 <html lang="en">
