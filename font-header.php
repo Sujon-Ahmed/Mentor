@@ -6,6 +6,7 @@ $banner = $obj->get_limit_banner();
 $about = $obj->get_limit_about();
 $why_about = $obj->get_limit_why_about();
 $course_features = $obj->features_limit();
+$get_course_category = $obj->get_course_category();
 ?>
 <!DOCTYPE html>
 <html lang="en">

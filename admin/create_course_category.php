@@ -41,8 +41,8 @@ include "header.php";
                         </div>
                     </div>
                     <div class="card-body">
-                        <label for="icon">Category Icon <small><a target="_blank" href="https://fontawesome.com/v5.15/icons?d=gallery&p=2"> Visit Site</a></small></label>
-                        <input type="text" name="icon" id="icon" class="form-control" placeholder="fa fa-icon_name">
+                        <label for="icon">Category Icon <small><a target="_blank" href="https://boxicons.com/"> Visit Site</a></small></label>
+                        <input type="text" name="icon" id="icon" class="form-control" placeholder="bx bx-icon_name">
                         <label for="name" class="mt-2">Category Name</label>
                         <input type="text" name="name" id="name" class="form-control" placeholder="Enter category name">
                         <input type="submit" name="submit" class="btn btn-primary mt-3" value="Save Changes">

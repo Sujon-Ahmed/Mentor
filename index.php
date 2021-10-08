@@ -127,7 +127,7 @@ include "font-header.php";
       <div class="container" data-aos="fade-up">
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-lg-3 col-md-4">
+          <!-- <div class="col-lg-3 col-md-4">
             <div class="icon-box">
               <i class="ri-store-line" style="color: #ffbb2c;"></i>
               <h3><a href="">Lorem Ipsum</a></h3>
@@ -192,13 +192,21 @@ include "font-header.php";
               <i class="ri-base-station-line" style="color: #ff5828;"></i>
               <h3><a href="">Verdo Park</a></h3>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-              <h3><a href="">Flavor Nivelanda</a></h3>
-            </div>
-          </div>
+          </div> -->
+          <?php
+            if($get_course_category->num_rows > 0){
+              while($row = $get_course_category->fetch_object()){
+                ?>
+                  <div class="col-lg-3 col-md-4 mt-4">
+                    <div class="icon-box">
+                      <i class="<?php echo $row->course_category_icon; ?>" style="color: #29cc61;"></i>
+                      <h3><a href=""><?php echo $row->course_category_name; ?></a></h3>
+                    </div>
+                  </div>
+                <?php
+              }
+            }
+          ?>
         </div>
 
       </div>
