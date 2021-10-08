@@ -311,6 +311,16 @@ class Database{
             return false;
         }
     }
+    // course features upate with id
+    public function course_features_update($id,$icon,$title,$desc){
+        $this->sql = "UPDATE `course_features` SET `course_features_icon`='$icon',`course_features_title`='$title',`course_features_desc`='$desc' WHERE `course_features_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 
     // close connection
