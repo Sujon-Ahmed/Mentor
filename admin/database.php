@@ -219,6 +219,16 @@ class Database{
             return false;
         }
     }
+    // about delete
+    public function delete_about($id){
+        $this->sql = "DELETE FROM `about` WHERE `about_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
     // ================ why about-us section ==============
     // insert about
     public function insert_why_about($title,$desc){

@@ -23,7 +23,7 @@ if(!isset($_POST['submit'])){
                 $fileNewName = uniqid('',true).'.'.$fileActualExt;
                 $fileDestination = "uploads/about/".$fileNewName;
                 if(move_uploaded_file($fileTmp,$fileDestination)){
-                    unlink("uploads/about".$oldphoto);
+                    unlink("uploads/about/".$oldphoto);
                     $status = $obj->update_about_with_photo($id,$title,$desc,$fileNewName);
                     if($status == true){
                         Flash_data::success("About Section Update Success");
