@@ -386,6 +386,17 @@ class Database{
             return false;
         }
     }
+    // delete course category with id
+    public function delete_course_category($id)
+    {
+        $this->sql = "DELETE FROM `course_category` WHERE `course_category_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 
     // close connection

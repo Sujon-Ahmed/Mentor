@@ -64,7 +64,7 @@ $result = $obj->get_course_category();
                                             <!-- view -->
                                             <td><a title="View" class="btn btn-success btn-sm" href="details_course_category.php?id=<?php echo $row->course_category_id; ?>"><i class="fas fa-eye"></i></a></td>
                                             <!-- delete -->
-                                            <td><a title="Delete" class="btn btn-danger btn-sm" href="delete_course_category.php?id=<?php echo $row->course_category_id; ?>"><i class="fas fa-trash"></i></a></td>
+                                            <td><a onclick="javascript:return confirm('Are You Sure?')" title="Delete" class="btn btn-danger btn-sm" href="delete_course_category.php?id=<?php echo $row->course_category_id; ?>"><i class="fas fa-trash"></i></a></td>
                                         </tr>
                                     <?php
                                     $si++;
