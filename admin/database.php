@@ -364,6 +364,28 @@ class Database{
             return false;
         }
     }
+    // get course category with id
+    public function get_course_id($id)
+    {
+        $this->sql = "SELECT * FROM `course_category` WHERE `course_category_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+    // get course category update with id
+    public function update_course_category($id,$icon,$name)
+    {
+        $this->sql = "UPDATE `course_category` SET `course_category_icon`='$icon',`course_category_name`='$name' WHERE `course_category_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 
     // close connection
