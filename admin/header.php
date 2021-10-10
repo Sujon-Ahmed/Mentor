@@ -43,6 +43,15 @@ if($get_admin_photo->num_rows > 0){
     <link rel="stylesheet" href="boxicons/css/boxicons.css">
     <link rel="stylesheet" href="boxicons/css/boxicons.min.css">
     <link rel="stylesheet" href="boxicons/css/transformations.css">
+    <!-- style for parsley message -->
+    <style>
+        .parsley-errors-list li{
+            color: red;
+            display: block;
+            width: 100%;
+            padding-top: 5px;
+        }
+    </style>
 </head>
 <body id="page-top">
     <!-- Page Wrapper -->

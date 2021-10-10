@@ -30,7 +30,7 @@ include "header.php";
         <h1 class="h3 mb-0 text-gray-800">Create Why About</h1>
         <p class="mb-4">Dashboard / Why_About / Create</p>
     </div>
-    <form action="create_why_about_action.php" method="POST">
+    <form action="create_why_about_action.php" method="POST" data-parsley-validate>
         <div class="row">
             <div class="col-md-10 m-auto">
                 <div class="card shadow-sm mb-4">
@@ -42,7 +42,7 @@ include "header.php";
                     </div>
                     <div class="card-body">
                         <label for="title">Why About Title</label>
-                        <input type="text" name="title" id="title" class="form-control" placeholder="Enter why about us title...">
+                        <input type="text" name="title" id="title" class="form-control" placeholder="Enter why about us title..." required>
                         <label for="description">Description</label>
                         <textarea name="description" id="desc" class="form-control" cols="30" rows="10"></textarea>
                         <input type="submit" name="submit" class="btn btn-primary mt-3" value="Save Changes">

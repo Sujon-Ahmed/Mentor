@@ -30,7 +30,7 @@ include "header.php";
         <h1 class="h3 mb-0 text-gray-800">Create Course Features</h1>
         <p class="mb-4">Dashboard / Features / Create</p>
     </div>
-    <form action="create_course_category_action.php" method="POST">
+    <form action="create_course_category_action.php" method="POST" data-parsley-validate>
         <div class="row">
             <div class="col-md-8 m-auto">
                 <div class="card shadow-sm mb-4">
@@ -42,9 +42,9 @@ include "header.php";
                     </div>
                     <div class="card-body">
                         <label for="icon">Category Icon <small><a target="_blank" href="https://boxicons.com/"> Visit Site</a></small></label>
-                        <input type="text" name="icon" id="icon" class="form-control" placeholder="bx bx-icon_name">
+                        <input type="text" name="icon" id="icon" class="form-control" placeholder="bx bx-icon_name" required>
                         <label for="name" class="mt-2">Category Name</label>
-                        <input type="text" name="name" id="name" class="form-control" placeholder="Enter category name">
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Enter category name" required>
                         <input type="submit" name="submit" class="btn btn-primary mt-3" value="Save Changes">
                     </div>
                 </div>

@@ -30,7 +30,7 @@ include "header.php";
         <h1 class="h3 mb-0 text-gray-800">Create About</h1>
         <p class="mb-4">Dashboard / About / Create</p>
     </div>
-    <form action="create_about_action.php" method="POST" id="about" enctype="multipart/form-data">
+    <form action="create_about_action.php" method="POST" id="about" enctype="multipart/form-data" data-parsley-validate>
         <div class="row">
             <div class="col-md-10 m-auto">
                 <div class="card shadow-sm mb-4">
@@ -39,7 +39,7 @@ include "header.php";
                     </div>
                     <div class="card-body">
                         <label for="title">About Title</label>
-                        <input type="text" name="title" id="title" class="form-control" placeholder="Enter about title...">
+                        <input type="text" name="title" id="title" class="form-control" placeholder="Enter about title..." required>
                         <div class="form-row mt-2">
                             <div class="form-group col-md-12">
                                 <label for="about-img" class="btn btn-primary mt-2"><i class="fas fa-upload"></i> Uploads Image</label>
