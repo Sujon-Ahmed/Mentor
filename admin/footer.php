@@ -108,6 +108,21 @@
         $("#about-img").change(function() {
             aboutPreview(this);
         });
+        // image preview script for trainer
+        function trainerPreview(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#trainer + img').remove();
+                    $('#trainer-img-prev').html('<img class="img-fluid img-thumbnail" src="'+e.target.result+'" width="400px" height="auto" />');
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#trainer-img").change(function() {
+            trainerPreview(this);
+        });
+         
     </script>
     <!-- script for summernote -->
     <script>

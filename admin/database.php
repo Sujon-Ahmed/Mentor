@@ -407,6 +407,18 @@ class Database{
             return false;
         }
     }
+    // ===================== trainer section ==============
+    // insert trainer
+    public function add_trainer($name,$designation,$about,$fileNewName)
+    {
+        $this->sql = "INSERT INTO `trainers`(`trainer_name`, `trainer_designation`, `trainer_about`, `trainer_image`) VALUES ('$name','$designation','$about','$fileNewName')";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 
     // close connection
