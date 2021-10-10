@@ -75,7 +75,7 @@ $result = $obj->get_course_features();
                                             <!-- view menu -->
                                             <td><a title="View" href="course_features_details.php?id=<?php echo $row->course_features_id; ?>" class="btn btn-success btn-sm"><i class="fas fa-eye"></i></a></td>
                                             <!-- delete menu -->
-                                            <td><a title="Delete" href="course_features_delete.php?id=<?php echo $row->course_features_id; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a></td>
+                                            <td><a onclick="javascript:return confirm('Are You Sure?')" title="Delete" href="course_features_delete.php?id=<?php echo $row->course_features_id; ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a></td>
                                         </tr>
                                     <?php
                                     $si++;

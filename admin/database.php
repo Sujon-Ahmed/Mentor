@@ -341,6 +341,16 @@ class Database{
             return false;
         }
     }
+    // course features delete with id
+    public function delete_course_features($id){
+        $this->sql = "DELETE FROM `course_features` WHERE `course_features_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
     // ================ course category section ==============
     // insert course category
     public function course_category_insert($icon,$name)

@@ -3,7 +3,9 @@ session_start();
 include 'flash_data.php';
 include 'database.php';
 $obj = new Database();
-if(isset($_POST['submit'])){
+if(!isset($_POST['submit'])){
+    header("location:create_course_category.php");
+}else{
     $icon = $_POST['icon'];
     $name = $_POST['name'];
     $status = $obj->course_category_insert($icon,$name);

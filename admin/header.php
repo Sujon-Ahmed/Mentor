@@ -145,6 +145,21 @@ if($get_admin_photo->num_rows > 0){
                     </div>
                 </div>
             </li>
+            <!-- Nav Item - Manage Trainers -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTrainers"
+                    aria-expanded="true" aria-controls="collapseTrainers">
+                    <i class="fa fa-chalkboard-teacher"></i>
+                    <span>Manage Trainers</span>
+                </a>
+                <div id="collapseTrainers" class="collapse <?php if($page == "trainers"){echo "show";} ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage Trainers</h6>
+                        <a class="collapse-item <?php if($sub_page == "add_trainer"){echo "active";} ?>" href="add_new_trainer.php">Add</a>
+                        <a class="collapse-item <?php if($sub_page == "view_trainers"){echo "active";} ?>" href="view_trainers.php">View</a>
+                    </div>
+                </div>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Sidebar Toggler (Sidebar) -->
