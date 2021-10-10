@@ -353,9 +353,9 @@ class Database{
     }
     // ================ course category section ==============
     // insert course category
-    public function course_category_insert($icon,$name)
+    public function course_category_insert($icon,$name,$slag)
     {
-        $this->sql = "INSERT INTO `course_category`(`course_category_icon`, `course_category_name`) VALUES ('$icon','$name')";
+        $this->sql = "INSERT INTO `course_category`( `course_category_icon`, `course_category_name`, `slag`) VALUES ('$icon','$name','$slag')";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return true;
@@ -386,9 +386,9 @@ class Database{
         }
     }
     // get course category update with id
-    public function update_course_category($id,$icon,$name)
+    public function update_course_category($id,$icon,$name,$slag)
     {
-        $this->sql = "UPDATE `course_category` SET `course_category_icon`='$icon',`course_category_name`='$name' WHERE `course_category_id` = '$id'";
+        $this->sql = "UPDATE `course_category` SET `course_category_icon`='$icon',`course_category_name`='$name',`slag`='$slag' WHERE `course_category_id` = '$id'";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return true;

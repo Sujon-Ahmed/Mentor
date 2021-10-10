@@ -41,7 +41,8 @@ $result = $obj->get_course_category();
                         <tr>
                             <th>SI</th>
                             <th>Icon</th>
-                            <th>Title</th>
+                            <th>Category Name</th>
+                            <th>Slag</th>
                             <th>Created_at</th>
                             <th>Edit</th>
                             <th>View</th>
@@ -58,6 +59,7 @@ $result = $obj->get_course_category();
                                             <td><?php echo $si; ?></td>
                                             <td><i class="<?php echo $row->course_category_icon; ?>"></i></td>
                                             <td><?php echo $row->course_category_name; ?></td>
+                                            <td><?php echo $row->slag; ?></td>
                                             <td><?php echo date('M-d-Y h:i A',strtotime($row->course_category_created)); ?></td>
                                             <!-- edit -->
                                             <td><a title="Edit" class="btn btn-primary btn-sm" href="edit_course_category.php?id=<?php echo $row->course_category_id; ?>"><i class="fas fa-edit"></i></a></td>

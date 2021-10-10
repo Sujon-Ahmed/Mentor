@@ -9,7 +9,8 @@ if(!isset($_POST['submit'])){
     $id = $_POST['id'];
     $icon = $_POST['icon'];
     $name = $_POST['name'];
-    $status = $obj->update_course_category($id,$icon,$name);
+    $slag = strtolower(str_replace(' ','-',$_POST['name']));
+    $status = $obj->update_course_category($id,$icon,$name,$slag);
     // check status
     if($status == true){
         Flash_data::success("Course Category Update Success");

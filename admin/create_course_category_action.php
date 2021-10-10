@@ -8,7 +8,8 @@ if(!isset($_POST['submit'])){
 }else{
     $icon = $_POST['icon'];
     $name = $_POST['name'];
-    $status = $obj->course_category_insert($icon,$name);
+    $slag = strtolower(str_replace(' ','-',$_POST['name']));
+    $status = $obj->course_category_insert($icon,$name,$slag);
     // check status
     if($status == true){
         Flash_data::success("Course Category Add Success");
