@@ -419,6 +419,17 @@ class Database{
             return false;
         }
     }
+    // get trainer joining table in view page
+    public function get_trainers_join()
+    {
+        $this->sql = "SELECT * FROM trainers INNER JOIN course_category ON trainers.trainer_designation = course_category.course_category_id;";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
 
 
     // close connection
