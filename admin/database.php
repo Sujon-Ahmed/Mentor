@@ -430,6 +430,17 @@ class Database{
             return false;
         }
     }
+    // get trainer home page with limit
+    public function get_trainers_limit()
+    {
+        $this->sql = "SELECT * FROM trainers INNER JOIN course_category ON trainers.trainer_designation = course_category.course_category_id LIMIT 3";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
 
 
     // close connection
