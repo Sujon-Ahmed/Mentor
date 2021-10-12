@@ -452,6 +452,17 @@ class Database{
             return false;
         }
     }
+     // get trainer number
+     public function get_trainers_number()
+     {
+         $this->sql = "SELECT * FROM trainers";
+         $this->result = $this->conn->query($this->sql);
+         if($this->result == true){
+             return $this->result->num_rows;
+         }else{
+             return false;
+         }
+     }
 
 
     // close connection

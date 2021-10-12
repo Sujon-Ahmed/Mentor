@@ -8,6 +8,7 @@ $why_about = $obj->get_limit_why_about();
 $course_features = $obj->features_limit();
 $get_course_category = $obj->get_course_category();
 $get_trainers_with_limit = $obj->get_trainers_limit();
+$total_trainers = $obj->get_trainers_number();
 ?>
 <!DOCTYPE html>
 <html lang="en">

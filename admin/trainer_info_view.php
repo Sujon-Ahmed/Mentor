@@ -18,13 +18,13 @@ if(isset($_GET['id'])){
 <!-- Begin Page Content -->
 <div class="container">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">About Details</h1>
-    <p class="mb-4">Dashboard / About / Details</p>
+    <h1 class="h3 mb-2 text-gray-800">Trainer Details</h1>
+    <p class="mb-4">Dashboard / Trainer / Details</p>
     
     <div class="card shadow-sm mb-4">
         <div class="card-header py-3">
             <div class="d-flex justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">About Details</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Trainer Details</h6>
                 <a href="view_trainers.php" class="btn btn-primary btn-sm">View</a>
             </div>
         </div>
