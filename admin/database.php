@@ -452,17 +452,39 @@ class Database{
             return false;
         }
     }
-     // get trainer number
-     public function get_trainers_number()
-     {
-         $this->sql = "SELECT * FROM trainers";
-         $this->result = $this->conn->query($this->sql);
-         if($this->result == true){
-             return $this->result->num_rows;
-         }else{
-             return false;
-         }
-     }
+    // get trainer number
+    public function get_trainers_number()
+    {
+        $this->sql = "SELECT * FROM trainers";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result->num_rows;
+        }else{
+            return false;
+        }
+    }
+    // update trainer information with photo
+    public function update_trainer_with_photo($id,$name,$designation,$about,$fileNewName)
+    {
+        $this->sql = "UPDATE `trainers` SET `trainer_name`='$name',`trainer_designation`='$designation',`trainer_about`='$about',`trainer_image`='$fileNewName' WHERE `trainer_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    // update trainer information without photo
+    public function update_trainer_without_photo($id,$name,$designation,$about,$oldphoto)
+    {
+        $this->sql = "UPDATE `trainers` SET `trainer_name`='$name',`trainer_designation`='$designation',`trainer_about`='$about',`trainer_image`='$oldphoto' WHERE `trainer_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 
     // close connection
