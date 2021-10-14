@@ -2,6 +2,13 @@
 session_start();
 include "admin/database.php";
 $obj = new Database();
+$profile_retrive = $obj->profile_retrive_photo();
+if($profile_retrive->num_rows > 0){
+  while($row = $profile_retrive->fetch_object()){
+    $email = $row->admin_email;
+    $phone = $row->admin_phone;
+  }
+}
 $banner = $obj->get_limit_banner();
 $about = $obj->get_limit_about();
 $why_about = $obj->get_limit_why_about();
@@ -19,8 +26,8 @@ $total_trainers = $obj->get_trainers_number();
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <!-- Vendor CSS Files -->
@@ -55,9 +62,9 @@ $total_trainers = $obj->get_trainers_number();
           <li><a href="trainers.html">Trainers</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="pricing.html">Pricing</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Pages</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
+              <li><a href="#">Page 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
@@ -76,6 +83,6 @@ $total_trainers = $obj->get_trainers_number();
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="courses.html" class="get-started-btn">Get Started</a>
+      <a href="register.php" class="get-started-btn">Get Started</a>
     </div>
   </header><!-- End Header -->
