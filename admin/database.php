@@ -485,6 +485,17 @@ class Database{
             return false;
         }
     }
+    // delete trainer info with id
+    public function delete_trainer_info($id)
+    {
+        $this->sql = "DELETE FROM `trainers` WHERE `trainer_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 
     // close connection

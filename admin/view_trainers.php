@@ -75,7 +75,7 @@ $result = $obj->get_trainers_join();
                                             </td>
                                             <!-- delete -->
                                             <td>
-                                                <a href="trainer_info_delete.php?id=<?php echo $row->trainer_id; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                                <a onclick="javascript:return confirm('Are You Sure?')" href="trainer_info_delete.php?id=<?php echo $row->trainer_id; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php
