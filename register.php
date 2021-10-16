@@ -11,7 +11,11 @@
                   <div class="card-body">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="bx bxs-user"></i></span>
-                        <input type="text" class="form-control" placeholder="Enter your name here..." aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" name="student_name" class="form-control" placeholder="Enter your name here..." aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="bx bxs-user"></i></span>
+                        <input type="text" name="student_name" class="form-control" placeholder="Enter your name here..." aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                   </div>
               </div>
