@@ -496,7 +496,18 @@ class Database{
             return false;
         }
     }
-
+    // =============== student admission ================
+    public function student_admission($student_name,$student_email,$course_category,$fileNewName)
+    {
+        $this->sql = "INSERT INTO `students`(`student_name`, `student_gmail`, `student_img`, `student_course`) VALUES ('$student_name','$student_email','$fileNewName','$course_category')";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+ 
 
     // close connection
     public function __destruct()
