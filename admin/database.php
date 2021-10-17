@@ -452,6 +452,17 @@ class Database{
             return false;
         }
     }
+    // get trainers
+    public function get_trainers()
+    {
+        $this->sql = "SELECT * FROM trainers";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
     // get trainer number
     public function get_trainers_number()
     {
@@ -519,7 +530,19 @@ class Database{
             return false;
         }
     }
- 
+    // ===================== course section ======================
+    // insert course 
+    public function add_course($title,$course_category,$fee,$desc,$trainer,$fileNewName)
+    {
+        $this->sql = "INSERT INTO `courses`(`course_title`, `course_category`, `course_fee`, `trainer`, `course_thumbnail`, `course_desc`) VALUES ('$title','$course_category','$fee','$trainer','$fileNewName','$desc')";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
 
     // close connection
     public function __destruct()

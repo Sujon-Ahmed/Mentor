@@ -122,6 +122,20 @@
         $("#trainer-img").change(function() {
             trainerPreview(this);
         });
+        // image preview script for course
+        function coursePreview(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#course + img').remove();
+                    $('#course-img-prev').html('<img class="img-fluid img-thumbnail" src="'+e.target.result+'" width="400px" height="auto" />');
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#course-img").change(function() {
+            coursePreview(this);
+        });
          
     </script>
     <!-- script for summernote -->
