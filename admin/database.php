@@ -497,12 +497,24 @@ class Database{
         }
     }
     // =============== student admission ================
+    // student registration data insert
     public function student_admission($student_name,$student_email,$course_category,$fileNewName)
     {
         $this->sql = "INSERT INTO `students`(`student_name`, `student_gmail`, `student_img`, `student_course`) VALUES ('$student_name','$student_email','$fileNewName','$course_category')";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return true;
+        }else{
+            return false;
+        }
+    }
+    // get all students information
+    public function get_students_join()
+    {
+        $this->sql = "SELECT * FROM students INNER JOIN course_category ON students.student_course = course_category.course_category_id";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
         }else{
             return false;
         }

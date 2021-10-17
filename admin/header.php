@@ -171,6 +171,20 @@ if($get_admin_photo->num_rows > 0){
                     </div>
                 </div>
             </li>
+            <!-- Nav Item - Manage Students -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStudents"
+                    aria-expanded="true" aria-controls="collapseStudents">
+                    <i class="fa fa-user"></i>
+                    <span>Manage Students</span>
+                </a>
+                <div id="collapseStudents" class="collapse <?php if($page == "students"){echo "show";} ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage Students</h6>
+                        <a class="collapse-item <?php if($sub_page == "view_students"){echo "active";} ?>" href="view_students.php">View</a>
+                    </div>
+                </div>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Sidebar Toggler (Sidebar) -->
