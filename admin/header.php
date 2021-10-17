@@ -196,6 +196,7 @@ if($get_admin_photo->num_rows > 0){
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Manage Courses</h6>
                         <a class="collapse-item <?php if($sub_page == "add_courses"){echo "active";} ?>" href="add_course.php">Create</a>
+                        <a class="collapse-item <?php if($sub_page == "view_courses"){echo "active";} ?>" href="view_courses.php">View</a>
                     </div>
                 </div>
             </li>
