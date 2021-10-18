@@ -45,7 +45,6 @@ $result = $obj->get_students_join();
                             <th>Gmail</th>
                             <th>Course Name</th>
                             <th>Admission Date</th>
-                            <th>Details</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
@@ -58,14 +57,14 @@ $result = $obj->get_students_join();
                                         <tr>
                                             <td><?php echo $si; ?></td>
                                             <td>
-                                                <img src="<?php echo "uploads/students/".$row->student_img; ?>" alt="" class="img-fluid" width="80px">
+                                                <img src="<?php echo "uploads/students/".$row->student_img; ?>" alt="" class="img-fluid" width="100px">
                                             </td>
                                             <td><?php echo $row->student_name; ?></td>
                                             <td><?php echo $row->student_gmail; ?></td>
                                             <td><?php echo $row->course_category_name; ?></td>
                                             <td><?php echo $row->admintion_time; ?></td>
-                                            <td><a title="Details" href="students_details.php?id=<?php echo $row->student_id; ?>" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a></td>
-                                            <td><a title="Delete" href="students_delete.php?id=<?php echo $row->student_id; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
+                                            <!-- delete student info -->
+                                            <td class="text-center"><a title="Delete" href="#?id=<?php echo $row->student_id; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
                                         </tr>
                                     <?php
                                     $si++;

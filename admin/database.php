@@ -553,6 +553,17 @@ class Database{
             return false;
         }
     }
+    // get course info with id
+    public function get_course_info_id($id)
+    {
+        $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id WHERE course_id = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
     
 
     // close connection
