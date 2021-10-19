@@ -16,6 +16,7 @@ $course_features = $obj->features_limit();
 $get_course_category = $obj->get_course_category();
 $get_trainers_with_limit = $obj->get_trainers_limit();
 $total_trainers = $obj->get_trainers_number();
+$get_course_limit = $obj->get_course_limit();
 ?>
 <!DOCTYPE html>
 <html lang="en">

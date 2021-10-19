@@ -564,6 +564,40 @@ class Database{
             return false;
         }
     }
+    // get course info with limit 3
+    public function get_course_limit()
+    {
+        $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id limit 3";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+    // update course with photo
+    public function update_course($id,$title,$category,$fee,$trainer,$details,$fileNewName)
+    {
+        $this->sql = "UPDATE `courses` SET `course_title`='$title',`course_category`='$category',`course_fee`='$fee',`trainer`='$trainer',`course_thumbnail`='$fileNewName',`course_desc`='$details' WHERE `course_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    // update course without photo
+    public function update_course_out_photo($id,$title,$category,$fee,$trainer,$details,$oldphoto)
+    {
+        $this->sql = "UPDATE `courses` SET `course_title`='$title',`course_category`='$category',`course_fee`='$fee',`trainer`='$trainer',`course_thumbnail`='$oldphoto',`course_desc`='$details' WHERE `course_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
     
 
     // close connection
