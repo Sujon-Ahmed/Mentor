@@ -597,7 +597,29 @@ class Database{
             return false;
         }
     }
-    
+    // total course
+    public function total_course()
+    {
+        $this->sql = "SELECT * FROM `courses`";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result->num_rows;
+        }else{
+            return false;
+        }
+    }
+    // ========== student count =============
+    // total student
+    public function total_student()
+    {
+        $this->sql = "SELECT * FROM `students`";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result->num_rows;
+        }else{
+            return false;
+        }
+    }
     
 
     // close connection

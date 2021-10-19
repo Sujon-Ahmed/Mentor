@@ -17,6 +17,8 @@ $get_course_category = $obj->get_course_category();
 $get_trainers_with_limit = $obj->get_trainers_limit();
 $total_trainers = $obj->get_trainers_number();
 $get_course_limit = $obj->get_course_limit();
+$total_course = $obj->total_course();
+$total_student = $obj->total_student();
 ?>
 <!DOCTYPE html>
 <html lang="en">
