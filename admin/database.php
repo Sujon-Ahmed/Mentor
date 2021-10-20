@@ -441,6 +441,17 @@ class Database{
             return false;
         }
     }
+    // get total trainers
+    public function get_all_trainers()
+    {
+        $this->sql = "SELECT * FROM trainers INNER JOIN course_category ON trainers.trainer_designation = course_category.course_category_id";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
     // get trainer details in details page
     public function get_trainers_details($id)
     {
@@ -568,6 +579,17 @@ class Database{
     public function get_course_limit()
     {
         $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id limit 3";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+    // toal courses
+    public function get_total_courses()
+    {
+        $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return $this->result;

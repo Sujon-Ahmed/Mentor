@@ -15,8 +15,10 @@ $why_about = $obj->get_limit_why_about();
 $course_features = $obj->features_limit();
 $get_course_category = $obj->get_course_category();
 $get_trainers_with_limit = $obj->get_trainers_limit();
+$get_all_trainers = $obj->get_all_trainers();
 $total_trainers = $obj->get_trainers_number();
 $get_course_limit = $obj->get_course_limit();
+$get_total_courses = $obj->get_total_courses();
 $total_course = $obj->total_course();
 $total_student = $obj->total_student();
 ?>
@@ -60,9 +62,9 @@ $total_student = $obj->total_student();
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="active" href="index.php">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="trainers.html">Trainers</a></li>
+          <li><a href="about.php">About</a></li>
+          <li><a href="courses.php">Courses</a></li>
+          <li><a href="trainers.php">Trainers</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li class="dropdown"><a href="#"><span>Pages</span> <i class="bi bi-chevron-down"></i></a>

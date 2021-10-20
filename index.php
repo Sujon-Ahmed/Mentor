@@ -10,7 +10,7 @@ include "font-header.php";
             <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
               <h1><?php echo $banner_limit->banner_title; ?></h1>
               <h2><?php echo $banner_limit->banner_desc; ?></h2>
-              <a href="courses.html" class="btn-get-started">Get Started</a>
+              <a href="courses.php" class="btn-get-started">Get Started</a>
             </div>
           </section>
         <?php
@@ -78,7 +78,7 @@ include "font-header.php";
                     <h3><?php echo $row->why_about_title; ?></h3>
                     <p class="text-muted"><?php echo $row->why_about_desc; ?></p>
                     <div class="text-center">
-                      <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                      <a href="about.php" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
                     </div>
                   </div>
                   <?php
