@@ -65,8 +65,8 @@ $total_student = $obj->total_student();
           <li><a href="about.php">About</a></li>
           <li><a href="courses.php">Courses</a></li>
           <li><a href="trainers.php">Trainers</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="events.php">Events</a></li>
+          <li><a href="pricing.php">Pricing</a></li>
           <li class="dropdown"><a href="#"><span>Pages</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Page 1</a></li>
@@ -84,7 +84,7 @@ $total_student = $obj->total_student();
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
