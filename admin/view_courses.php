@@ -72,7 +72,7 @@ $result = $obj->get_course_info();
                                                 <a class="btn btn-success btn-sm" href="details_course.php?id=<?php echo $row->course_id; ?>"><i class="fa fa-eye"></i></a>
                                             </td>
                                             <td>
-                                                <a class="btn btn-danger btn-sm" href="delete_course.php?id=<?php echo $row->course_id; ?>"><i class="fa fa-trash"></i></a>
+                                                <a onclick="javascript:return confirm('Are you sure?')" class="btn btn-danger btn-sm" href="delete_course.php?id=<?php echo $row->course_id; ?>"><i class="fa fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php

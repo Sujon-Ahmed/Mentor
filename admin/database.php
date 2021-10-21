@@ -586,7 +586,7 @@ class Database{
             return false;
         }
     }
-    // toal courses
+    // total courses
     public function get_total_courses()
     {
         $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id";
@@ -626,6 +626,17 @@ class Database{
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return $this->result->num_rows;
+        }else{
+            return false;
+        }
+    }
+    // delete course
+    public function delete_course($id)
+    {
+        $this->sql = "DELETE FROM `courses` WHERE course_id = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
         }else{
             return false;
         }
