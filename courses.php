@@ -1,4 +1,17 @@
-<?php include 'font-header.php'; ?>
+<?php 
+include 'font-header.php'; 
+// pagination code
+$num_per_page = 06;
+if(isset($_GET["page"])){
+  $page = $_GET["page"];
+}else{
+  $page=1;
+}
+// echo $page;
+$start_from = ($page-1)*06;
+$total_course_pagination = $obj->pagination_with_course($start_from,$num_per_page);
+
+?>
   <main id="main" data-aos="fade-in">
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
@@ -16,8 +29,8 @@
             if($get_total_courses->num_rows > 0){
               while($row = $get_total_courses->fetch_object()){
                 ?>
-                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-4">
-                    <div class="course-item">
+                  <div class="col-md-4 mt-4 mt-md-4">
+                    <div class="course-item shadow-sm">
                       <img src="<?php echo "admin/uploads/courses/".$row->course_thumbnail; ?>" class="img-fluid" alt="">
                       <div class="course-content">
                         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -29,11 +42,12 @@
                         <p>
                           <?php
                             $description = $row->course_desc;
-                            if(strlen($description) > 300){
-                              echo substr($description,0,300).'...';
+                            if(strlen($description) > 400){
+                              echo substr($description,0,400).'...';
                             }else{
                               echo $description;
                             }
+                            // echo $row->course_desc;
                           ?>
                         </p>
                         <div class="trainer d-flex justify-content-between align-items-center">
@@ -55,12 +69,42 @@
             }
           ?>
           <!-- End Course Item-->
+          <!-- pagination start -->
+            <nav aria-label="Page navigation example" class="mt-5">
+              <?php
+                $total_record = $obj->total_course();
+                $total_page = ceil($total_record/$num_per_page);
+              ?>
+              <ul class="pagination justify-content-center">
+              <?php
+                if($page>1){
+                  ?>
+                    <li class="page-item">
+                      <a class="page-link" href="courses.php?page=<?php echo $page-1;?>">Previous</a>
+                    </li>
+                  <?php
+                }
+                for($i=1;$i<$total_page;$i++){
+                  ?>
+                    <li class="page-item">
+                      <a class="page-link" class="<?php if($i == $page){echo 'active';} ?>" href="courses.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                    </li>
+                  <?php
+                }
+                if($i>$page){
+                  ?>
+                    <li class="page-item">
+                      <a class="page-link" href="courses.php?page=<?php echo $page+1;?>">Next</a>
+                    </li>
+                  <?php
+                }
+              ?>
+            </ul>
+          </nav>
+          <!-- pagination end -->
         </div>
-
       </div>
     </section><!-- End Courses Section -->
-
   </main><!-- End #main -->
-
   <!-- ======= Footer ======= -->
 <?php include 'font-footer.php'; ?>

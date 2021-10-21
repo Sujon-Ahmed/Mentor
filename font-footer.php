@@ -64,7 +64,7 @@ $course_category = $obj->get_course_category();
           <!-- You can delete the links only if you purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by <a target="_blank" href="https://github.com/Sujon-Ahmed/">Sujon Ahmed</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">

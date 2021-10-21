@@ -556,7 +556,7 @@ class Database{
     // get course info with trainer and course category
     public function get_course_info()
     {
-        $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id;";
+        $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id ORDER BY c.course_id DESC";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return $this->result;
@@ -578,7 +578,7 @@ class Database{
     // get course info with limit 3
     public function get_course_limit()
     {
-        $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id limit 3";
+        $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id ORDER BY c.course_id DESC limit 3";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return $this->result;
@@ -589,7 +589,18 @@ class Database{
     // total courses
     public function get_total_courses()
     {
-        $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id";
+        $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id ORDER BY c.course_id DESC";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+    // total courses
+    public function pagination_with_course($start_from,$num_per_page)
+    {
+        $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id ORDER BY c.course_id DESC LIMIT $start_from,$num_per_page";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return $this->result;
