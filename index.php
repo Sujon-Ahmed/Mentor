@@ -149,40 +149,40 @@ include "font-header.php";
             if($get_course_limit->num_rows > 0){
               while($row = $get_course_limit->fetch_object()){
                 ?>
-                  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="course-item">
-              <img src="<?php echo "admin/uploads/courses/".$row->course_thumbnail; ?>" class="img-fluid" alt="">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4><?php echo $row->course_category_name; ?></h4>
-                  <p class="price">$<?php echo $row->course_fee; ?></p>
-                </div>
+                  <div class="col-lg-4 col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="course-item">
+                      <img src="<?php echo "admin/uploads/courses/".$row->course_thumbnail; ?>" class="img-fluid" alt="">
+                      <div class="course-content">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                          <h4><?php echo $row->course_category_name; ?></h4>
+                          <p class="price">$<?php echo $row->course_fee; ?></p>
+                        </div>
 
-                <h3><a href="course-details.html"><?php echo $row->course_title; ?></a></h3>
-                <p>
-                  <?php
-                    $description = $row->course_desc;
-                    if(strlen($description) > 300){
-                      echo substr($description,0,300).'...';
-                    }else{
-                      echo $description;
-                    }
-                  ?>
-                </p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="<?php echo "admin/uploads/trainers/".$row->trainer_image; ?>" class="img-fluid" alt="">
-                    <span><?php echo $row->trainer_name; ?></span>
+                        <h3><a href="course-details.html"><?php echo $row->course_title; ?></a></h3>
+                        <p>
+                          <?php
+                            $description = $row->course_desc;
+                            if(strlen($description) > 400){
+                              echo substr($description,0,400).'...';
+                            }else{
+                              echo $description;
+                            }
+                          ?>
+                        </p>
+                        <div class="trainer d-flex justify-content-between align-items-center">
+                          <div class="trainer-profile d-flex align-items-center">
+                            <img src="<?php echo "admin/uploads/trainers/".$row->trainer_image; ?>" class="img-fluid" alt="">
+                            <span><?php echo $row->trainer_name; ?></span>
+                          </div>
+                          <!-- <div class="trainer-rank d-flex align-items-center">
+                            <i class="bx bx-user"></i>&nbsp;35
+                            &nbsp;&nbsp;
+                            <i class="bx bx-heart"></i>&nbsp;42
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <!-- <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;35
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;42
-                  </div> -->
-                </div>
-              </div>
-            </div>
-          </div>
                 <?php
               }
             }
