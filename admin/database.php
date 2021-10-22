@@ -533,7 +533,7 @@ class Database{
     // get all students information
     public function get_students_join()
     {
-        $this->sql = "SELECT * FROM students INNER JOIN course_category ON students.student_course = course_category.course_category_id";
+        $this->sql = "SELECT * FROM students INNER JOIN course_category ON students.student_course = course_category.course_category_id ORDER BY student_id DESC";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return $this->result;

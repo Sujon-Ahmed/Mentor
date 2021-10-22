@@ -45,7 +45,6 @@ $result = $obj->get_students_join();
                             <th>Gmail</th>
                             <th>Course Name</th>
                             <th>Admission Date</th>
-                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -63,8 +62,6 @@ $result = $obj->get_students_join();
                                             <td><?php echo $row->student_gmail; ?></td>
                                             <td><?php echo $row->course_category_name; ?></td>
                                             <td><?php echo $row->admintion_time; ?></td>
-                                            <!-- delete student info -->
-                                            <td class="text-center"><a title="Delete" href="#?id=<?php echo $row->student_id; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a></td>
                                         </tr>
                                     <?php
                                     $si++;
