@@ -1,14 +1,14 @@
 <?php 
 include 'font-header.php'; 
 // pagination code
-$num_per_page = 06;
+$num_per_page = 03;
 if(isset($_GET["page"])){
   $page = $_GET["page"];
 }else{
   $page=1;
 }
 // echo $page;
-$start_from = ($page-1)*06;
+$start_from = ($page-1)*03;
 $total_course_pagination = $obj->pagination_with_course($start_from,$num_per_page);
 
 ?>
@@ -38,7 +38,7 @@ $total_course_pagination = $obj->pagination_with_course($start_from,$num_per_pag
                           <p class="price">$<?php echo $row->course_fee; ?></p>
                         </div>
 
-                        <h3><a href="course-details.html"><?php echo $row->course_title; ?></a></h3>
+                        <h3><a href="course-details.php?id=<?php echo $row->course_id; ?>"><?php echo $row->course_title; ?></a></h3>
                         <p>
                           <?php
                             $description = $row->course_desc;

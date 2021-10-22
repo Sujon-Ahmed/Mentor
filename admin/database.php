@@ -597,6 +597,17 @@ class Database{
             return false;
         }
     }
+    // single courses details
+    public function get_single_course_details($id)
+    {
+        $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id WHERE c.course_id = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
     // total courses
     public function pagination_with_course($start_from,$num_per_page)
     {

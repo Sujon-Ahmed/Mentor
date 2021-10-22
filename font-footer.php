@@ -91,6 +91,8 @@ $course_category = $obj->get_course_category();
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  
+  <!-- fb comments plugins -->
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="1GLzgV71"></script>
 </body>
 </html>

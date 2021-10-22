@@ -19,6 +19,7 @@ $get_all_trainers = $obj->get_all_trainers();
 $total_trainers = $obj->get_trainers_number();
 $get_course_limit = $obj->get_course_limit();
 $get_total_courses = $obj->get_total_courses();
+// $get_course_with_id = $obj->get_course_id();
 $total_course = $obj->total_course();
 $total_student = $obj->total_student();
 ?>

@@ -158,7 +158,7 @@ include "font-header.php";
                           <p class="price">$<?php echo $row->course_fee; ?></p>
                         </div>
 
-                        <h3><a href="course-details.html"><?php echo $row->course_title; ?></a></h3>
+                        <h3><a href="course-details.php?id=<?php echo $row->course_id; ?>"><?php echo $row->course_title; ?></a></h3>
                         <p>
                           <?php
                             $description = $row->course_desc;
