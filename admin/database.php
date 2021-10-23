@@ -676,6 +676,17 @@ class Database{
             return false;
         }
     }
+    // total events desc
+    public function get_total_events()
+    {
+        $this->sql = "SELECT * FROM `events` ORDER BY event_id DESC";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
     
 
     // close connection
