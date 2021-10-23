@@ -26,8 +26,8 @@ $total_course_pagination = $obj->pagination_with_course($start_from,$num_per_pag
       <div class="container" data-aos="fade-up">
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           <?php
-            if($get_total_courses->num_rows > 0){
-              while($row = $get_total_courses->fetch_object()){
+            if($total_course_pagination->num_rows > 0){
+              while($row = $total_course_pagination->fetch_object()){
                 ?>
                   <div class="col-md-4 mt-4 mt-md-4">
                     <div class="course-item shadow-sm">

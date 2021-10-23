@@ -586,17 +586,6 @@ class Database{
             return false;
         }
     }
-    // total courses
-    public function get_total_courses()
-    {
-        $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id ORDER BY c.course_id DESC";
-        $this->result = $this->conn->query($this->sql);
-        if($this->result == true){
-            return $this->result;
-        }else{
-            return false;
-        }
-    }
     // single courses details
     public function get_single_course_details($id)
     {
@@ -671,6 +660,18 @@ class Database{
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return $this->result->num_rows;
+        }else{
+            return false;
+        }
+    }
+    // ================ Events Section ===============
+    // insert events
+    public function insert_events($title,$description,$fileNewName)
+    {
+        $this->sql = "INSERT INTO `events`(`event_title`, `event_img`, `event_desc`) VALUES ('$title','$fileNewName','$description')";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
         }else{
             return false;
         }

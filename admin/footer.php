@@ -136,6 +136,20 @@
         $("#course-img").change(function() {
             coursePreview(this);
         });
+        // image preview script for events
+        function eventsPreview(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#events + img').remove();
+                    $('#events-img-prev').html('<img class="img-fluid img-thumbnail" src="'+e.target.result+'" width="400px" height="auto" />');
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#events-img").change(function() {
+            eventsPreview(this);
+        });
          
     </script>
     <!-- script for summernote -->

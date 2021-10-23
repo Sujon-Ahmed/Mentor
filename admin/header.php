@@ -200,6 +200,21 @@ if($get_admin_photo->num_rows > 0){
                     </div>
                 </div>
             </li>
+            <!-- Nav Item - Manage Events -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEvents"
+                    aria-expanded="true" aria-controls="collapseEvents">
+                    <i class="fa fa-book-open"></i>
+                    <span>Manage Events</span>
+                </a>
+                <div id="collapseEvents" class="collapse <?php if($page == "events"){echo "show";} ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage Events</h6>
+                        <a class="collapse-item <?php if($sub_page == "add_events"){echo "active";} ?>" href="add_events.php">Create</a>
+                        <a class="collapse-item <?php if($sub_page == "view_events"){echo "active";} ?>" href="view_events.php">View</a>
+                    </div>
+                </div>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Sidebar Toggler (Sidebar) -->
