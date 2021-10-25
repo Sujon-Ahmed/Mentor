@@ -687,6 +687,17 @@ class Database{
             return false;
         }
     }
+    // get events with id
+    public function get_events_id($id)
+    {
+        $this->sql = "SELECT * FROM `events` WHERE event_id ='$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
     
 
     // close connection

@@ -204,7 +204,7 @@ if($get_admin_photo->num_rows > 0){
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEvents"
                     aria-expanded="true" aria-controls="collapseEvents">
-                    <i class="fa fa-book-open"></i>
+                    <i class="fa fa-calendar-check"></i>
                     <span>Manage Events</span>
                 </a>
                 <div id="collapseEvents" class="collapse <?php if($page == "events"){echo "show";} ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
