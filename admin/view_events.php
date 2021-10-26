@@ -79,7 +79,7 @@ $result = $obj->get_total_events();
                                                 <a class="btn btn-success btn-sm" href="details_events.php?id=<?php echo $row->event_id; ?>"><i class="fa fa-eye"></i></a>
                                             </td>
                                             <td>
-                                                <a class="btn btn-danger btn-sm" href="delete_events.php?id=<?php echo $row->event_id; ?>"><i class="fa fa-trash"></i></a>
+                                                <a onclick="javascript:return confirm('Are You Sure?')" class="btn btn-danger btn-sm" href="delete_events.php?id=<?php echo $row->event_id; ?>"><i class="fa fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php

@@ -698,6 +698,17 @@ class Database{
             return false;
         }
     }
+    // delete events with id
+    public function delete_event($id)
+    {
+        $this->sql = "DELETE FROM `events` WHERE event_id ='$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
     
 
     // close connection
