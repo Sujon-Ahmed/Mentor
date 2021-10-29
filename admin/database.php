@@ -720,6 +720,28 @@ class Database{
             return false;
         }
     }
+    // update events with photo
+    public function update_events_photo($id,$title,$desc,$fileNewName)
+    {
+        $this->sql = "UPDATE `events` SET `event_title`='$title',`event_img`='$fileNewName',`event_desc`='$desc' WHERE `event_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    // update events with out photo
+    public function update_events__without_photo($id,$title,$desc,$oldphoto)
+    {
+        $this->sql = "UPDATE `events` SET `event_title`='$title',`event_img`='$oldphoto',`event_desc`='$desc' WHERE `event_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
     
 
     // close connection
