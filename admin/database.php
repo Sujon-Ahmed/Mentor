@@ -709,6 +709,17 @@ class Database{
             return false;
         }
     }
+    // get total events number
+    public function get_total_events_number()
+    {
+        $this->sql = "SELECT * FROM `events`";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result->num_rows;
+        }else{
+            return false;
+        }
+    }
     
 
     // close connection

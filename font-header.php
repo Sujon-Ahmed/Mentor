@@ -23,6 +23,7 @@ $get_course_limit = $obj->get_course_limit();
 $total_course = $obj->total_course();
 $total_student = $obj->total_student();
 $total_events = $obj->get_total_events();
+$get_total_events_number = $obj->get_total_events_number();
 ?>
 <!DOCTYPE html>
 <html lang="en">

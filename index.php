@@ -54,7 +54,7 @@ include "font-header.php";
             <p>Courses</p>
           </div>
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="<?php echo $get_total_events_number; ?>" data-purecounter-duration="1" class="purecounter"></span>
             <p>Events</p>
           </div>
           <div class="col-lg-3 col-6 text-center">
