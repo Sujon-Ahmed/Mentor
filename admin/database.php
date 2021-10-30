@@ -563,6 +563,17 @@ class Database{
             return false;
         }
     }
+    // feedback insert
+    public function feedback_add($id,$feedback)
+    {
+        $this->sql = "UPDATE `students` SET `feedback`='$feedback' WHERE `student_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
     // ===================== course section ======================
     // insert course 
     public function add_course($title,$course_category,$fee,$desc,$trainer,$fileNewName)
