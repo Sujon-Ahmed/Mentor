@@ -66,7 +66,7 @@ $result = $obj->get_students_join();
                                             <td><?php echo $row->course_category_name; ?></td>
                                             <td><?php echo date("M-d-Y h:i A",strtotime($row->admintion_time)); ?></td>
                                             <td class="text-center">
-                                                <a href="delete_student.php" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                                <a onclick="javascript:return confirm('Are You Sure?')" href="delete_student.php?id=<?php echo $row->student_id; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                             </td>
                                         </tr>
                                     <?php

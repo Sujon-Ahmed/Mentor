@@ -541,6 +541,28 @@ class Database{
             return false;
         }
     }
+    // get all students information with id
+    public function get_student_info_id($id)
+    {
+        $this->sql = "SELECT * FROM `students` WHERE student_id = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+    // delete students information with id
+    public function delete_student_info($id)
+    {
+        $this->sql = "DELETE FROM `students` WHERE student_id = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
     // ===================== course section ======================
     // insert course 
     public function add_course($title,$course_category,$fee,$desc,$trainer,$fileNewName)
