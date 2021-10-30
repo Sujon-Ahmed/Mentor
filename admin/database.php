@@ -520,9 +520,9 @@ class Database{
     }
     // =============== student admission ================
     // student registration data insert
-    public function student_admission($student_name,$student_email,$course_category,$fileNewName)
+    public function student_admission($student_name,$student_phone,$student_email,$course_category,$fileNewName)
     {
-        $this->sql = "INSERT INTO `students`(`student_name`, `student_gmail`, `student_img`, `student_course`) VALUES ('$student_name','$student_email','$fileNewName','$course_category')";
+        $this->sql = "INSERT INTO `students`(`student_name`, `student_phone`, `student_gmail`, `student_img`, `student_course`) VALUES ('$student_name','$student_phone','$student_email','$fileNewName','$course_category')";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return true;

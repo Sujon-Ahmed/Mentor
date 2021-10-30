@@ -42,9 +42,11 @@ $result = $obj->get_students_join();
                             <th>SI</th>
                             <th>Image</th>
                             <th>Name</th>
+                            <th>Phone</th>
                             <th>Gmail</th>
                             <th>Course Name</th>
                             <th>Admission Date</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -59,9 +61,13 @@ $result = $obj->get_students_join();
                                                 <img src="<?php echo "uploads/students/".$row->student_img; ?>" alt="" class="img-fluid" width="100px">
                                             </td>
                                             <td><?php echo $row->student_name; ?></td>
+                                            <td><?php echo $row->student_phone; ?></td>
                                             <td><?php echo $row->student_gmail; ?></td>
                                             <td><?php echo $row->course_category_name; ?></td>
-                                            <td><?php echo $row->admintion_time; ?></td>
+                                            <td><?php echo date("M-d-Y h:i A",strtotime($row->admintion_time)); ?></td>
+                                            <td class="text-center">
+                                                <a href="delete_student.php" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                            </td>
                                         </tr>
                                     <?php
                                     $si++;

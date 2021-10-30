@@ -91,6 +91,6 @@ $get_total_events_number = $obj->get_total_events_number();
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="register.php" class="get-started-btn">Get Started</a>
+      <a href="register.php" class="get-started-btn">Admission</a>
     </div>
   </header><!-- End Header -->

@@ -5,13 +5,18 @@
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-md-8 m-auto">
               <div class="card shadow-sm p-4">
-                  <h4 class="card-title text-center">Register Here</h4>
+                  <h4 class="card-title text-center">Admission Here</h4>
+                  <p class="text-muted text-center">We will communicate through your Phone or Gmail</p>
                   <hr>
                   <div class="card-body">
                     <form action="admission.php" method="POST" id="student" enctype="multipart/form-data">
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i class="bx bxs-user"></i></span>
                             <input type="text" name="student_name" class="form-control" placeholder="Enter your name here..." aria-label="Username" aria-describedby="basic-addon1" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="bx bxs-phone"></i></span>
+                            <input type="number" name="student_phone" class="form-control" placeholder="Enter your phone number..." aria-label="UserPhone" aria-describedby="basic-addon1" required>
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon2"><i class="bx bxs-envelope"></i></span>

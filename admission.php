@@ -4,6 +4,7 @@ include 'admin/database.php';
 $obj = new Database();
 if(isset($_POST['submit'])){
     $student_name = $_POST['student_name'];
+    $student_phone = $_POST['student_phone'];
     $student_email = $_POST['student_email'];
     $course_category = $_POST['course_category'];
     // img upload
@@ -20,7 +21,7 @@ if(isset($_POST['submit'])){
                 $fileNewName = uniqid('',true).'.'.$fileActualExt;
                 $fileDestination = "admin/uploads/students/".$fileNewName;
                 if(move_uploaded_file($fileTmp,$fileDestination)){
-                    $status = $obj->student_admission($student_name,$student_email,$course_category,$fileNewName);
+                    $status = $obj->student_admission($student_name,$student_phone,$student_email,$course_category,$fileNewName);
                     if($status == true){
                         header("location:register.php");
                     }else{
