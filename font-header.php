@@ -24,6 +24,7 @@ $total_course = $obj->total_course();
 $total_student = $obj->total_student();
 $total_events = $obj->get_total_events();
 $get_total_events_number = $obj->get_total_events_number();
+$feedback_result = $obj->get_students_join_limit_feedback();
 ?>
 <!DOCTYPE html>
 <html lang="en">
