@@ -45,8 +45,8 @@ $result = $obj->get_students_join();
                             <th>Phone</th>
                             <th>Gmail</th>
                             <th>Course Name</th>
-                            <th>Admission Date</th>
                             <th>Feedback</th>
+                            <th>Details</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
@@ -65,10 +65,15 @@ $result = $obj->get_students_join();
                                             <td><?php echo $row->student_phone; ?></td>
                                             <td><?php echo $row->student_gmail; ?></td>
                                             <td><?php echo $row->course_category_name; ?></td>
-                                            <td><?php echo date("M-d-Y h:i A",strtotime($row->admintion_time)); ?></td>
+                                            <!-- feedback -->
                                             <td class="text-center">
                                                 <a href="feedback.php?id=<?php echo $row->student_id; ?>" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
                                             </td>
+                                            <!-- details -->
+                                            <td class="text-center">
+                                                <a href="student_details.php?id=<?php echo $row->student_id; ?>" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
+                                            </td>
+                                            <!-- delete -->
                                             <td class="text-center">
                                                 <a onclick="javascript:return confirm('Are You Sure?')" href="delete_student.php?id=<?php echo $row->student_id; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                             </td>

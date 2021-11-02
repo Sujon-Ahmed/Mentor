@@ -542,6 +542,17 @@ class Database{
         }
     }
     // get all students information with id
+    public function get_students_join_id($id)
+    {
+        $this->sql = "SELECT * FROM students INNER JOIN course_category ON students.student_course = course_category.course_category_id WHERE student_id = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+    // get all students information with id
     public function get_student_info_id($id)
     {
         $this->sql = "SELECT * FROM `students` WHERE student_id = '$id'";
