@@ -707,6 +707,18 @@ class Database{
             return false;
         }
     }
+    // get category wise course
+    public function get_category_wise_course($course_id)
+    {
+        $this->sql = "SELECT * FROM courses AS c INNER JOIN course_category AS cc ON c.course_category = cc.course_category_id INNER JOIN trainers AS t ON c.trainer = t.trainer_id WHERE cc.course_category_id = '$course_id'";
+        $this->result = $this->conn->query($this->sql);
+        if($this->result == true){
+            return $this->result;
+        }else{
+            return false;
+        }
+    }
+
     // ========== student count =============
     // total student
     public function total_student()

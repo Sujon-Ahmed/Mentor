@@ -123,7 +123,7 @@ include "font-header.php";
                   <div class="col-lg-3 col-md-4 mt-4">
                     <div class="icon-box">
                       <i class="<?php echo $row->course_category_icon; ?>" style="color: #29cc61;"></i>
-                      <h3><a href=""><?php echo $row->course_category_name; ?></a></h3>
+                      <h3><a href="category_wise_courses.php?id=<?php echo $row->course_category_id; ?>"><?php echo $row->course_category_name; ?></a></h3>
                     </div>
                   </div>
                 <?php
