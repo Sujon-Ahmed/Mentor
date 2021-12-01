@@ -55,46 +55,43 @@
   <!-- ======= Testimonials Section ======= -->
   <section id="testimonials" class="testimonials">
     <div class="container" data-aos="fade-up">
-
       <div class="section-title">
         <h2>Testimonials</h2>
         <p>What are they saying</p>
       </div>
-
       <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
         <div class="swiper-wrapper">
-        <?php
-          if ($feedback_result->num_rows > 0) {
-            while ($row = $feedback_result->fetch_object()) {
-              ?>
-                <div class="swiper-slide">
-                  <div class="testimonial-wrap">
-                    <div class="testimonial-item">
-                      <img src="<?php echo "admin/uploads/students/".$row->student_img; ?>" class="testimonial-img" alt="">
-                      <h3><?php echo $row->student_name; ?></h3>
-                      <h4><?php echo $row->course_category_name; ?></h4>
-                      <p>
-                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                        <?php
-                          if(empty($row->feedback)){
-                            echo 'Nothing!';
-                          }else{
-                            echo $row->feedback;
-                          }
-                        ?>
-                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                      </p>
+          <?php
+            if ($feedback_result->num_rows > 0) {
+              while ($row = $feedback_result->fetch_object()) {
+                ?>
+                  <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                      <div class="testimonial-item">
+                        <img src="<?php echo "admin/uploads/students/".$row->student_img; ?>" class="testimonial-img" alt="">
+                        <h3><?php echo $row->student_name; ?></h3>
+                        <h4><?php echo $row->course_category_name; ?></h4>
+                        <p>
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          <?php
+                            if(empty($row->feedback)){
+                              echo 'Nothing!';
+                            }else{
+                              echo $row->feedback;
+                            }
+                          ?>
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              <?php
+                <?php
+              }
             }
-          }
-        ?>
-          
+          ?>
           <!-- End testimonial item -->
         </div>
-        <div class="swiper-pagination"></div>
+      <div class="swiper-pagination"></div>
       </div>
     </div>
   </section><!-- End Testimonials Section -->

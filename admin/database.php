@@ -544,7 +544,7 @@ class Database{
     // get all students information
     public function get_students_join_limit_feedback()
     {
-        $this->sql = "SELECT * FROM students INNER JOIN course_category ON students.student_course = course_category.course_category_id LIMIT 5";
+        $this->sql = "SELECT * FROM students INNER JOIN course_category ON students.student_course = course_category.course_category_id LIMIT 3";
         $this->result = $this->conn->query($this->sql);
         if($this->result == true){
             return $this->result;

@@ -60,7 +60,7 @@ if(isset($_GET['id'])){
         <div class="col-lg-8">
           <h3>Comments</h3>
           <div>
-            <div class="fb-comments" data-href="http://localhost/mentor/course-details.php?id=<?php echo $_GET['id']; ?>" data-width="" data-numposts="5"></div>
+            <div class="fb-comments" data-href="https://developers.facebook.com/localhost/mentor/course-details.php?id=<?php echo $_GET['id']; ?>" data-width="100%" data-numposts="5"></div>
           </div>
         </div>
       </div>
