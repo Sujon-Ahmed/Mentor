@@ -25,6 +25,11 @@ $total_student = $obj->total_student();
 $total_events = $obj->get_total_events();
 $get_total_events_number = $obj->get_total_events_number();
 $feedback_result = $obj->get_students_join_limit_feedback();
+// pricing sql
+$free = $obj->free_pricing();
+$business = $obj->business_pricing();
+$developer = $obj->developer_pricing();
+$ultimate = $obj->ultimate_pricing();
 ?>
 <!DOCTYPE html>
 <html lang="en">

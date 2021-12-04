@@ -830,6 +830,46 @@ class Database{
             return false;
         }
     }
+    // free pricing
+    public function free_pricing() {
+        $this->sql = "SELECT * FROM `pricing` WHERE `pricing_id` = 1";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result;
+        } else {
+            return false;
+        }
+    }
+    // business pricing
+    public function business_pricing() {
+        $this->sql = "SELECT * FROM `pricing` WHERE `pricing_id` = 2";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result;
+        } else {
+            return false;
+        }
+    }
+    // developer pricing
+    public function developer_pricing() {
+        $this->sql = "SELECT * FROM `pricing` WHERE `pricing_id` = 3";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result;
+        } else {
+            return false;
+        }
+    }
+     // ultimate pricing
+     public function ultimate_pricing() {
+        $this->sql = "SELECT * FROM `pricing` WHERE `pricing_id` = 4";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result;
+        } else {
+            return false;
+        }
+    }
 
     // close connection
     public function __destruct()
