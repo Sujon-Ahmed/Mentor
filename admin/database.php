@@ -870,6 +870,27 @@ class Database{
             return false;
         }
     }
+    // edit pricing plan with id
+    public function get_pricing_with_id($id) {
+        $this->sql = "SELECT * FROM `pricing` WHERE `pricing_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result;
+        } else {
+            return false;
+        }
+    }
+    // update pricing plan with id
+    public function update_pricing_with_id($id,$title,$price,$desc) {
+        $this->sql = "UPDATE `pricing` SET `pricing_title`='$title',`pricing_price`='$price',`pricing_desc`='$desc' WHERE `pricing_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
     // close connection
     public function __destruct()
