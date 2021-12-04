@@ -87,7 +87,7 @@ class Database{
             return false;
         }
     }
-    // =============== banner section ===================
+    // ? =============== banner section ===================
     // insert banner data
     public function create_banner($title,$desc,$fileNewName){
         $this->sql = "INSERT INTO `banner`(`banner_title`, `banner_img`, `banner_desc`) VALUES ('$title','$fileNewName','$desc')";
@@ -158,7 +158,7 @@ class Database{
             return false;
         }
     }
-    // ================= about section ======================
+    // ? ================= about section ======================
     // insert about
     public function insert_about($title, $desc, $fileNewName){
         $this->sql = "INSERT INTO `about`(`about_title`, `about_desc`, `about_image`) VALUES ('$title','$desc','$fileNewName')";
@@ -229,7 +229,7 @@ class Database{
             return false;
         }
     }
-    // ================ why about-us section ==============
+    // ? ================ why about-us section ==============
     // insert about
     public function insert_why_about($title,$desc){
         $this->sql = "INSERT INTO `why_about`( `why_about_title`, `why_about_desc`) VALUES ('$title','$desc')";
@@ -290,7 +290,7 @@ class Database{
             return false;
         }
     }
-    // ======================= course features ====================
+    // ? ======================= course features ====================
     // insert course features data
     public function insert_course_features($icon,$title,$desc){
         $this->sql = "INSERT INTO `course_features` (`course_features_icon`, `course_features_title`, `course_features_desc`) VALUES ('$icon','$title','$desc')";
@@ -351,7 +351,7 @@ class Database{
             return false;
         }
     }
-    // ================ course category section ==============
+    // ? ================ course category section ==============
     // insert course category
     public function course_category_insert($icon,$name,$slag)
     {
@@ -407,7 +407,7 @@ class Database{
             return false;
         }
     }
-    // ===================== trainer section ==============
+    // ? ===================== trainer section ==============
     // insert trainer
     public function add_trainer($name,$designation,$about,$fileNewName)
     {
@@ -518,7 +518,7 @@ class Database{
             return false;
         }
     }
-    // =============== student admission ================
+    // ? =============== student admission ================
     // student registration data insert
     public function student_admission($student_name,$student_phone,$student_email,$course_category,$fileNewName)
     {
@@ -596,7 +596,7 @@ class Database{
             return false;
         }
     }
-    // ===================== course section ======================
+    // ? ===================== course section ======================
     // insert course 
     public function add_course($title,$course_category,$fee,$desc,$trainer,$fileNewName)
     {
@@ -719,7 +719,7 @@ class Database{
         }
     }
 
-    // ========== student count =============
+    // ? ========== student count =============
     // total student
     public function total_student()
     {
@@ -731,7 +731,7 @@ class Database{
             return false;
         }
     }
-    // ================ Events Section ===============
+    // ? ================ Events Section ===============
     // insert events
     public function insert_events($title,$description,$fileNewName)
     {
@@ -809,7 +809,17 @@ class Database{
             return false;
         }
     }
-    
+    // ? ==================== Pricing Section ====================
+    // insert pricing plan data
+    public function insert_pricing_plan($pricing_title,$pricing_amount,$description) {
+        $this->sql = "INSERT INTO `pricing`(`pricing_title`, `pricing_price`, `pricing_desc`) VALUES ('$pricing_title','$pricing_amount','$description')";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     // close connection
     public function __destruct()

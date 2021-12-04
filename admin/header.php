@@ -215,6 +215,21 @@ if($get_admin_photo->num_rows > 0){
                     </div>
                 </div>
             </li>
+            <!-- Nav Item - Manage Pricing -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePricing"
+                    aria-expanded="true" aria-controls="collapsePricing">
+                    <i class="fa fa-dollar-sign"></i>
+                    <span>Manage Pricing</span>
+                </a>
+                <div id="collapsePricing" class="collapse <?php if($page == "pricing"){echo "show";} ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage Pricing</h6>
+                        <a class="collapse-item <?php if($sub_page == "create_pricing"){echo "active";} ?>" href="create_pricing.php">Create</a>
+                        <a class="collapse-item <?php if($sub_page == "view_pricing"){echo "active";} ?>" href="view_events.php">View</a>
+                    </div>
+                </div>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Sidebar Toggler (Sidebar) -->
