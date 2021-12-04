@@ -820,6 +820,16 @@ class Database{
             return false;
         }
     }
+    // get total pricing
+    public function get_total_pricing() {
+        $this->sql = "SELECT * FROM `pricing`";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result;
+        } else {
+            return false;
+        }
+    }
 
     // close connection
     public function __destruct()

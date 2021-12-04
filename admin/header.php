@@ -226,7 +226,7 @@ if($get_admin_photo->num_rows > 0){
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Manage Pricing</h6>
                         <a class="collapse-item <?php if($sub_page == "create_pricing"){echo "active";} ?>" href="create_pricing.php">Create</a>
-                        <a class="collapse-item <?php if($sub_page == "view_pricing"){echo "active";} ?>" href="view_events.php">View</a>
+                        <a class="collapse-item <?php if($sub_page == "view_pricing"){echo "active";} ?>" href="view_pricing.php">View</a>
                     </div>
                 </div>
             </li>
