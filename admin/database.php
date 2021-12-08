@@ -890,6 +890,16 @@ class Database{
             return false;
         }
     }
+    // ?============ Location Section ================
+    public function insert_location($title,$link) {
+        $this->sql = "INSERT INTO `location`(`location_title`, `location_link`) VALUES ('$title','$link')";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
     // close connection

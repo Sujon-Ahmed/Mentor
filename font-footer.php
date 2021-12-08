@@ -37,11 +37,6 @@ $course_category = $obj->get_course_category();
                         }
                     }
                 ?>
-              
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
             </ul>
           </div>
           <div class="col-lg-4 col-md-6 footer-newsletter">

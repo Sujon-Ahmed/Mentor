@@ -230,6 +230,21 @@ if($get_admin_photo->num_rows > 0){
                     </div>
                 </div>
             </li>
+            <!-- Nav Item - Manage Location -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLocation"
+                    aria-expanded="true" aria-controls="collapseLocation">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <span>Manage Location</span>
+                </a>
+                <div id="collapseLocation" class="collapse <?php if($page == "location"){echo "show";} ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage Location</h6>
+                        <a class="collapse-item <?php if($sub_page == "create_location"){echo "active";} ?>" href="create_location.php">Create</a>
+                        <a class="collapse-item <?php if($sub_page == "view_location"){echo "active";} ?>" href="view_location.php">View</a>
+                    </div>
+                </div>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Sidebar Toggler (Sidebar) -->
