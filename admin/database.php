@@ -921,12 +921,22 @@ class Database{
             return false;
         }
     }
-    // get location 
+    // get location with id
     public function get_location_with_id($id) {
         $this->sql = "SELECT * FROM `location` WHERE `location_id` = '$id'";
         $this->result = $this->conn->query($this->sql);
         if ($this->result == true) {
             return $this->result;
+        } else {
+            return false;
+        }
+    }
+    // update location with id
+    public function update_location_with_id($id,$title,$link) {
+        $this->sql = "UPDATE `location` SET `location_title`='$title',`location_link`='$link' WHERE `location_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return true;
         } else {
             return false;
         }
