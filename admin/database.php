@@ -891,11 +891,22 @@ class Database{
         }
     }
     // ?============ Location Section ================
+    // insert location
     public function insert_location($title,$link) {
         $this->sql = "INSERT INTO `location`(`location_title`, `location_link`) VALUES ('$title','$link')";
         $this->result = $this->conn->query($this->sql);
         if ($this->result == true) {
             return true;
+        } else {
+            return false;
+        }
+    }
+    // get location
+    public function get_location() {
+        $this->sql = "SELECT * FROM `location` LIMIT 1";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result;
         } else {
             return false;
         }

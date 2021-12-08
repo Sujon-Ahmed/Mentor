@@ -30,6 +30,8 @@ $free = $obj->free_pricing();
 $business = $obj->business_pricing();
 $developer = $obj->developer_pricing();
 $ultimate = $obj->ultimate_pricing();
+// location sql
+$get_location = $obj->get_location();
 ?>
 <!DOCTYPE html>
 <html lang="en">
