@@ -921,6 +921,16 @@ class Database{
             return false;
         }
     }
+    // get location 
+    public function get_location_with_id($id) {
+        $this->sql = "SELECT * FROM `location` WHERE `location_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result;
+        } else {
+            return false;
+        }
+    }
 
 
     // close connection

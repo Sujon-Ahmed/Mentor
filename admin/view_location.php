@@ -57,10 +57,10 @@ $result = $obj->get_maps();
                                         <td><?php echo $row->location_title; ?></td>
                                         <td><iframe style="border:0; width: 100%; height: auto;" src="<?php echo $row->location_link; ?>" frameborder="0" allowfullscreen></iframe> </td>
                                         <td>
-                                            <a href="edit_location.php" title="Edit" class="btn btn-success btn-sm">Edit</a>
+                                            <a href="edit_location.php?id=<?php echo $row->location_id; ?>" title="Edit" class="btn btn-success btn-sm">Edit</a>
                                         </td>
                                         <td>
-                                            <a href="delete_location.php" title="Delete" class="btn btn-danger btn-sm">Delete</a>
+                                            <a href="delete_location.php?id=<?php echo $row->location_id; ?>" title="Delete" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
                                 <?php
