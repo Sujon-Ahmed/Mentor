@@ -941,6 +941,16 @@ class Database{
             return false;
         }
     }
+    // delete location with id
+    public function delete_location($id) {
+        $this->sql = "DELETE FROM `location` WHERE `location_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
     // close connection

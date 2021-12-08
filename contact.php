@@ -1,15 +1,12 @@
 <?php include 'font-header.php'; ?>
-
   <main id="main">
-
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
         <h2>Contact Us</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+        <p>Ours Location</p>
       </div>
     </div><!-- End Breadcrumbs -->
-
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div data-aos="fade-up">
@@ -19,11 +16,8 @@
               ?>
             <iframe style="border:0; width: 100%; height: 350px;" src="<?php echo $row->location_link; ?>" frameborder="0" allowfullscreen></iframe>  
       </div>
-
       <div class="container" data-aos="fade-up">
-
         <div class="row mt-5">
-
           <div class="col-lg-4">
             <div class="info">
               <div class="address">
@@ -40,19 +34,14 @@
                 <h4>Email:</h4>
                 <p><?php echo $email; ?></p>
               </div>
-
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
                 <p><?php echo $phone; ?></p>
               </div>
-
             </div>
-
           </div>
-
           <div class="col-lg-8 mt-5 mt-lg-0">
-
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
@@ -77,13 +66,9 @@
             </form>
 
           </div>
-
         </div>
-
       </div>
     </section><!-- End Contact Section -->
-
   </main><!-- End #main -->
-
 <!-- ======= Footer ======= -->
 <?php include 'font-footer.php'; ?>

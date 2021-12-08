@@ -60,7 +60,7 @@ $result = $obj->get_maps();
                                             <a href="edit_location.php?id=<?php echo $row->location_id; ?>" title="Edit" class="btn btn-success btn-sm">Edit</a>
                                         </td>
                                         <td>
-                                            <a href="delete_location.php?id=<?php echo $row->location_id; ?>" title="Delete" class="btn btn-danger btn-sm">Delete</a>
+                                            <a onclick="javascript:return confirm('Are You Sure?')" href="delete_location.php?id=<?php echo $row->location_id; ?>" title="Delete" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
                                 <?php
