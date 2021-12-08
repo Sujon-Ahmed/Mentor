@@ -911,6 +911,16 @@ class Database{
             return false;
         }
     }
+    // get location
+    public function get_maps() {
+        $this->sql = "SELECT * FROM `location`";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result;
+        } else {
+            return false;
+        }
+    }
 
 
     // close connection

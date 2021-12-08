@@ -35,7 +35,10 @@ include "header.php";
             <div class="col-md-10 m-auto">
                 <div class="card shadow-sm mb-4">
                     <div class="card-header py-3">
+                        <div class="d-flex justify-content-between">
                         <h6 class="m-0 font-weight-bold text-primary">Location</h6>
+                        <a href="view_location.php" class="btn btn-primary btn-sm">View</a>
+                        </div>
                     </div>
                     <div class="card-body">
                         <!-- location_title -->
