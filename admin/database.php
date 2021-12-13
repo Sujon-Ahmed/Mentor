@@ -972,6 +972,16 @@ class Database{
             return false;
         }
     }
+    // get message with id
+    public function view_message_with_id($id) {
+        $this->sql = "SELECT * FROM `contact` WHERE `contact_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result;
+        } else {
+            return false;
+        }
+    }
 
 
     // close connection

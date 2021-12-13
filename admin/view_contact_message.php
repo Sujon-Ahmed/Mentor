@@ -61,10 +61,10 @@ $result = $obj->get_all_message();
                                         <td><?php echo $row->contact_subject; ?></td>
                                         <td><?php echo date('M-d-Y h:i A',strtotime($row->contact_msg_time)); ?></td>
                                         <td>
-                                            <a title="View" href="view_message.php" class="btn btn-success btn-sm">View</a>
+                                            <a title="View" href="view_message.php?id=<?php echo $row->contact_id; ?>" class="btn btn-success btn-sm">View</a>
                                         </td>
                                         <td>
-                                            <a title="Delete" href="delete_message.php" class="btn btn-danger btn-sm">Delete</a>
+                                            <a title="Delete" href="delete_message.php?id=<?php echo $row->contact_id; ?>" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
                                 <?php
