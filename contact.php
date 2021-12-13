@@ -42,7 +42,7 @@
             </div>
           </div>
           <div class="col-lg-8 mt-5 mt-lg-0">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="contact_action.php" method="POST" class="contact">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -57,14 +57,28 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <!-- toastr success message -->
+     <?php
+        if(isset($_SESSION['msg']['success'])){
+            ?>
+                <script>
+                    toastr.success("<?php echo Flash_data::show_error(); ?>");
+                </script>
+            <?php
+        }
+    ?>
+    <!-- toastr error message -->
+    <?php
+        if(isset($_SESSION['msg']['error'])){
+            ?>
+                <script>
+                    toastr.error("<?php echo Flash_data::show_error(); ?>");
+                </script>
+            <?php
+        }
+    ?>
+              <input type="submit" class="submitMessage mt-3 my-2 btn-success border-0 px-5 py-2 rounded-pill" name="submit" value="Send Message">
             </form>
-
           </div>
         </div>
       </div>

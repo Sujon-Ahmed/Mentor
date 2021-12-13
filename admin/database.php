@@ -951,6 +951,16 @@ class Database{
             return false;
         }
     }
+    // ============ Contact Message Section ============
+    public function insert_message($name, $email, $subject, $message) {
+        $this->sql = "INSERT INTO `contact` (`contact_name`, `contact_email`, `contact_subject`, `contact_message`) VALUES ('$name', '$email', '$subject', '$message')";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
     // close connection

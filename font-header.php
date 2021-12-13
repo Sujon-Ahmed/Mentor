@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "admin/flash_data.php";
 include "admin/database.php";
 $obj = new Database();
 $profile_retrive = $obj->profile_retrive_photo();
