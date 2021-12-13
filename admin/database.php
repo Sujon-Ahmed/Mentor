@@ -952,11 +952,22 @@ class Database{
         }
     }
     // ============ Contact Message Section ============
+    // insert message
     public function insert_message($name, $email, $subject, $message) {
         $this->sql = "INSERT INTO `contact` (`contact_name`, `contact_email`, `contact_subject`, `contact_message`) VALUES ('$name', '$email', '$subject', '$message')";
         $this->result = $this->conn->query($this->sql);
         if ($this->result == true) {
             return true;
+        } else {
+            return false;
+        }
+    }
+    // get all message
+    public function get_all_message() {
+        $this->sql = "SELECT * FROM `contact`";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result;
         } else {
             return false;
         }
