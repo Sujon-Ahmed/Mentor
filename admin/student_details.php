@@ -8,7 +8,7 @@ if(isset($_GET['id'])){
     if($result->num_rows > 0){
         while($row = $result->fetch_object()){
             $img = $row->student_img;
-            $admission = $row->	admintion_time;
+            $admission = $row->	admission_time;
             $name = $row->student_name;
             $phone = $row->student_phone;
             $email = $row->student_gmail;
