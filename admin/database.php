@@ -1013,6 +1013,16 @@ class Database{
             return false;
         }
     }
+    // delete subscriber email
+    public function delete_subscriber($id) {
+        $this->sql = "DELETE FROM `subscribers` WHERE `subscriber_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
     // close connection

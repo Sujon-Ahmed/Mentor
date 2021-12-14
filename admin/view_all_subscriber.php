@@ -56,7 +56,7 @@ $result = $obj->get_all_subscriber();
                                         <td><?php echo $row->subscriber_email; ?></td>
                                         <td><?php echo date('M-d-Y h:i A',strtotime($row->subscribe_time)); ?></td>
                                         <td>
-                                            <a title="Delete" onclick="javascript:return confirm('Are You Sure?')" href="delete_message.php?id=<?php echo $row->subscriber_id; ?>" class="btn btn-danger btn-sm">Delete</a>
+                                            <a title="Delete" onclick="javascript:return confirm('Are You Sure?')" href="delete_subscribe.php?id=<?php echo $row->subscriber_id; ?>" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
                                 <?php
