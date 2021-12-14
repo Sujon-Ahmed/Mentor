@@ -1003,6 +1003,16 @@ class Database{
             return false;
         }
     }
+    // get all subscriber email
+    public function get_all_subscriber() {
+        $this->sql = "SELECT * FROM `subscribers` ORDER BY `subscriber_id` DESC";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result;
+        } else {
+            return false;
+        }
+    }
 
 
     // close connection
