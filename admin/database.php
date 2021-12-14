@@ -992,6 +992,17 @@ class Database{
             return false;
         }
     }
+    // ========== Subscriber Section ===========
+    // insert subscriber email
+    public function insert_subscriber_email($email) {
+        $this->sql = "INSERT INTO `subscribers`(`subscriber_email`) VALUES ('$email')";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
     // close connection

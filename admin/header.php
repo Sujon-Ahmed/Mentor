@@ -259,6 +259,20 @@ if($get_admin_photo->num_rows > 0){
                     </div>
                 </div>
             </li>
+             <!-- Nav Item - Manage Subscriber -->
+             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSubscriber"
+                    aria-expanded="true" aria-controls="collapseSubscriber">
+                    <i class="fa fa-bell"></i>
+                    <span>Manage Subscriber</span>
+                </a>
+                <div id="collapseSubscriber" class="collapse <?php if($page == "subscriber"){echo "show";} ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Manage Subscriber</h6>
+                        <a class="collapse-item <?php if($sub_page == "view_subscriber"){echo "active";} ?>" href="view_all_subscriber.php">View</a>
+                    </div>
+                </div>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Sidebar Toggler (Sidebar) -->

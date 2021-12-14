@@ -42,8 +42,8 @@ $course_category = $obj->get_course_category();
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
             <p>If you have any new notifications then Subscribe our Website</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+            <form action="subscriber_action.php" method="POST">
+              <input type="email" name="email"><input type="submit" name="submit" value="Subscribe">
             </form>
           </div>
         </div>
