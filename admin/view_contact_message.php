@@ -64,7 +64,7 @@ $result = $obj->get_all_message();
                                             <a title="View" href="view_message.php?id=<?php echo $row->contact_id; ?>" class="btn btn-success btn-sm">View</a>
                                         </td>
                                         <td>
-                                            <a title="Delete" href="delete_message.php?id=<?php echo $row->contact_id; ?>" class="btn btn-danger btn-sm">Delete</a>
+                                            <a title="Delete" onclick="javascript:return confirm('Are You Sure?')" href="delete_message.php?id=<?php echo $row->contact_id; ?>" class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>
                                 <?php

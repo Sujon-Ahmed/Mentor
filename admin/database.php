@@ -982,6 +982,16 @@ class Database{
             return false;
         }
     }
+    // delete message with id
+    public function delete_message($id) {
+        $this->sql = "DELETE FROM `contact` WHERE `contact_id` = '$id'";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
     // close connection

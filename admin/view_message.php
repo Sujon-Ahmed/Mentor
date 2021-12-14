@@ -25,7 +25,7 @@ if(isset($_GET['id'])){
     <div class="card shadow-sm mb-4">
         <div class="card-header py-3">
             <div class="d-flex justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">MessageID #<?php echo $id; ?></h6>
+                <h6 class="m-0 font-weight-bold text-primary">MessageID <span class="badge bg-primary text-light"># <?php echo $id; ?></span></h6>
                 <a href="view_contact_message.php" class="btn btn-primary btn-sm">View</a>
             </div>
         </div>
