@@ -951,7 +951,7 @@ class Database{
             return false;
         }
     }
-    // ============ Contact Message Section ============
+    // ?============ Contact Message Section ============
     // insert message
     public function insert_message($name, $email, $subject, $message) {
         $this->sql = "INSERT INTO `contact` (`contact_name`, `contact_email`, `contact_subject`, `contact_message`) VALUES ('$name', '$email', '$subject', '$message')";
@@ -992,7 +992,7 @@ class Database{
             return false;
         }
     }
-    // ========== Subscriber Section ===========
+    // ?========== Subscriber Section ===========
     // insert subscriber email
     public function insert_subscriber_email($email) {
         $this->sql = "INSERT INTO `subscribers`(`subscriber_email`) VALUES ('$email')";
@@ -1019,6 +1019,87 @@ class Database{
         $this->result = $this->conn->query($this->sql);
         if ($this->result == true) {
             return true;
+        } else {
+            return false;
+        }
+    }
+    // ?============== Total record count ===============
+    // total banner
+    public function get_total_message() {
+        $this->sql = "SELECt * FROM `contact`";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result->num_rows;
+        } else {
+            return false;
+        }
+    }
+    // total course features
+    public function get_total_course_features() {
+        $this->sql = "SELECt * FROM `course_features`";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result->num_rows;
+        } else {
+            return false;
+        }
+    }
+    // total course category
+    public function get_total_course_category() {
+        $this->sql = "SELECt * FROM `course_category`";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result->num_rows;
+        } else {
+            return false;
+        }
+    }
+    // total course category
+    public function get_total_trainer() {
+        $this->sql = "SELECt * FROM `trainers`";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result->num_rows;
+        } else {
+            return false;
+        }
+    }
+    // total students
+    public function get_total_students() {
+        $this->sql = "SELECt * FROM `students`";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result->num_rows;
+        } else {
+            return false;
+        }
+    }
+    // total courses
+    public function get_total_courses() {
+        $this->sql = "SELECt * FROM `courses`";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result->num_rows;
+        } else {
+            return false;
+        }
+    }
+    // total events
+    public function total_events() {
+        $this->sql = "SELECt * FROM `events`";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result->num_rows;
+        } else {
+            return false;
+        }
+    }
+    // total subscriber
+    public function total_subscribers() {
+        $this->sql = "SELECt * FROM `subscribers`";
+        $this->result = $this->conn->query($this->sql);
+        if ($this->result == true) {
+            return $this->result->num_rows;
         } else {
             return false;
         }
