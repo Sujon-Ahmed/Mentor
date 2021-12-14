@@ -1,5 +1,6 @@
 <?php
 $course_category = $obj->get_course_category();
+$get_location = $obj->get_location();
 ?>
 <footer id="footer">
     <div class="footer-top">
@@ -8,9 +9,16 @@ $course_category = $obj->get_course_category();
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Mentor</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
+              <?php 
+               if ($get_location->num_rows > 0) {
+                 while($row = $get_location->fetch_object()) {
+                   ?>
+                    <p><?php echo $row->location_title; ?></p>
+                   <?php
+                 }
+               }
+              ?>
+              <br><br>
               <strong>Phone:</strong> <?php echo $phone; ?><br>
               <strong>Email:</strong> <?php echo $email; ?><br>
             </p>
