@@ -56,7 +56,7 @@ if (isset($_GET['id'])) {
                         <label for="location_title">Location Title</label>
                         <input type="text" name="location_title" value="<?php echo $title; ?>" id="location_title" class="form-control" placeholder="Enter location title here..." required>
                         <!-- location map link -->
-                        <label for="location_link" class='mt-2'>Location Link</label>
+                        <label for="location_link" class='mt-2'>Just Paste https Location Link</label>
                         <input type="text" name="location_link" value="<?php echo $link; ?>" id="location_link" class="form-control" placeholder="Enter location map link here..." required>
                         <!-- submit button -->
                         <input type="submit" name="submit" class="btn btn-primary mt-3" value="Save Changes">
