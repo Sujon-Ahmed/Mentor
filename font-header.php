@@ -4,8 +4,8 @@ include "admin/flash_data.php";
 include "admin/database.php";
 $obj = new Database();
 $profile_retrive = $obj->profile_retrive_photo();
-if($profile_retrive->num_rows > 0){
-  while($row = $profile_retrive->fetch_object()){
+if ($profile_retrive->num_rows > 0) {
+  while ($row = $profile_retrive->fetch_object()) {
     $email = $row->admin_email;
     $phone = $row->admin_phone;
   }
@@ -36,6 +36,7 @@ $get_location = $obj->get_location();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -64,6 +65,7 @@ $get_location = $obj->get_location();
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+
 <body>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -73,13 +75,13 @@ $get_location = $obj->get_location();
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" href="index.php">Home</a></li>
-          <li><a href="about.php">About</a></li>
-          <li><a href="courses.php">Courses</a></li>
-          <li><a href="trainers.php">Trainers</a></li>
-          <li><a href="events.php">Events</a></li>
-          <li><a href="pricing.php">Pricing</a></li>
-          <li class="dropdown"><a href="#"><span>Pages</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="<?= (basename($_SERVER['PHP_SELF']) == 'index.php') ? 'active' : '' ?>" href="index.php">Home</a></li>
+          <li><a class="<?= (basename($_SERVER['PHP_SELF']) == 'about.php') ? 'active' : '' ?>" href="about.php">About</a></li>
+          <li><a class="<?= (basename($_SERVER['PHP_SELF']) == 'courses.php') ? 'active' : '' ?>" href="courses.php">Courses</a></li>
+          <li><a class="<?= (basename($_SERVER['PHP_SELF']) == 'trainers.php') ? 'active' : '' ?>" href="trainers.php">Trainers</a></li>
+          <li><a class="<?= (basename($_SERVER['PHP_SELF']) == 'events.php') ? 'active' : '' ?>" href="events.php">Events</a></li>
+          <li><a class="<?= (basename($_SERVER['PHP_SELF']) == 'pricing.php') ? 'active' : '' ?>" href="pricing.php">Pricing</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Pages</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Page 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -95,8 +97,8 @@ $get_location = $obj->get_location();
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
             </ul>
-          </li>
-          <li><a href="contact.php">Contact</a></li>
+          </li> -->
+          <li><a class="<?= (basename($_SERVER['PHP_SELF']) == 'contact.php') ? 'active' : '' ?>" href="contact.php">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
